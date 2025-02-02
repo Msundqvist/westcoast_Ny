@@ -4,18 +4,22 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "server": "npx json-server",
-    "dev": "npm --watch"
+    "dev": "npm --watch",
+    "server": "npx json-server course.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Msundqvist/westcoast_Ny.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Msundqvist/westcoast_Ny/issues"
   },
   "homepage": "https://github.com/Msundqvist/westcoast_Ny#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.7.3"
+  }
 }
