@@ -1,0 +1,65 @@
+{
+  "courses": [
+    {
+      "coursName": "Brewing class",
+      "courseNumber": "1",
+      "duration": 10,
+      "classRoom": true,
+      "distans": false,
+      "image": "beer.jpg",
+      "startDate": "2025-04-10",
+      "popular": true
+    },
+    {
+      "coursName": "obedience class",
+      "courseNumber": "2",
+      "duration": 5,
+      "classRoom": false,
+      "distans": true,
+      "image": "miniature-schnauzer.jpg",
+      "startDate": "2025-05-10",
+      "popular": false
+    },
+    {
+      "coursName": "Bird watching",
+      "courseNumber": "3",
+      "duration": 3,
+      "classRoom": true,
+      "distans": false,
+      "image": "naturePhotographers.jpg",
+      "startDate": "2025-09-11",
+      "popular": false
+    },
+    {
+      "coursName": "Painting class",
+      "courseNumber": "4",
+      "duration": 15,
+      "classRoom": false,
+      "distans": true,
+      "image": "paint1",
+      "startDate": "2025-07-15",
+      "popular": true
+    },
+    {
+      "coursName": "Cooking class",
+      "courseNumber": "5",
+      "duration": 5,
+      "classRoom": true,
+      "distans": false,
+      "image": "paint1",
+      "startDate": "2025-07-15",
+      "popular": false
+    },
+    {
+      "coursName": "Survive in the wilderness",
+      "courseNumber": "6",
+      "duration": 5,
+      "classRoom": false,
+      "distans": true,
+      "image": "wilderness.jpg",
+      "startDate": "2025-03-15",
+      "popular": true
+    }
+  ],
+  "costumerOrders": []
+}
