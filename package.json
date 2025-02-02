@@ -1,0 +1,21 @@
+{
+  "name": "westcoast_ny",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "server": "npx json-server",
+    "dev": "npm --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Msundqvist/westcoast_Ny.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Msundqvist/westcoast_Ny/issues"
+  },
+  "homepage": "https://github.com/Msundqvist/westcoast_Ny#readme",
+  "description": ""
+}
