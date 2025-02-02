@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "dev": "npm --watch",
+    "dev": "tsc --watch",
     "server": "npx json-server course.json"
   },
   "repository": {
