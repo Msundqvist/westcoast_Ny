@@ -61,5 +61,77 @@
       "popular": true
     }
   ],
+  "registration": [
+    {
+      "id": "c06e",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "2400",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "3114",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "552d",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "b8f8",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "7572",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "1402",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "8400",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "28ee",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "b113",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "205c",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "409f",
+      "userName": "matilda",
+      "passWord": null
+    },
+    {
+      "id": "6a8f",
+      "userName": "matilda",
+      "passWord": "sundwipfapjgå"
+    },
+    {
+      "id": "cb3d",
+      "userName": "matilda",
+      "passWord": "sundwipfapjgå"
+    }
+  ],
   "costumerOrders": []
 }

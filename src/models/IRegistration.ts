@@ -1,5 +1,5 @@
 export interface IRegistration {
-  id: string;
+//   id: string;
   userName: string;
   passWord: string;
 }

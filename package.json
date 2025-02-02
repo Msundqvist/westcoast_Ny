@@ -5,7 +5,7 @@
   "scripts": {
     "test": "vitest",
     "dev": "tsc --watch",
-    "server": "npx json-server course.json"
+    "server": "npx json-server course.json register.json"
   },
   "repository": {
     "type": "git",

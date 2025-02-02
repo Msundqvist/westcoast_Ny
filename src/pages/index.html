@@ -11,7 +11,8 @@
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
-    <title>Document</title>
+    <script type="module" src="../../dist/registration.js" defer></script>
+    <title>Westcoast Education</title>
   </head>
   <body>
     <header>
@@ -51,16 +52,21 @@
       <div class="page-background"></div>
       <section id="form">
         <h1>Skapa en ny användare</h1>
-        <form id="form">
+        <form id="registerForm">
           <div class="form-control">
             <label for="userName">Användarnamn</label>
-            <input type="text" name="userName" id="userName" />
+            <input id="userName" type="text" name="userName" id="userName" />
           </div>
           <div class="form-control">
             <label for="password">Lösenord</label>
-            <input type="text" name="password" id="password" />
+            <input
+              id="password"
+              type="text"
+              name="password"
+              id="password"
+              required />
           </div>
-          <button class="btn" type="submit">logga in</button>
+          <button id="buttonSubmit" class="btn" type="submit">logga in</button>
         </form>
       </section>
     </main>

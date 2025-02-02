@@ -1,8 +1,10 @@
 import { IRegistration } from './IRegistration';
 import { ICourses } from './ICourses';
+import { ICoustumer } from './ICoustumer';
 
 export interface IOrder {
   id: string;
-  customer: IRegistration;
-  orderItems: ICourses[];
+  user: IRegistration[];
+  costumerOrders: ICourses[];
+  costumer: ICoustumer;
 }
