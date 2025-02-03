@@ -1,136 +1,117 @@
 {
   "courses": [
     {
-      "coursName": "Brewing class",
-      "courseNumber": "1",
+      "courseName": "Brewing class",
+      "courseNumber": 1,
       "duration": 10,
       "classRoom": true,
       "distans": false,
-      "image": "beer.jpg",
+      "imageUrl": "beer.jpg",
       "startDate": "2025-04-10",
-      "popular": true
+      "popular": true,
+      "id": "7384"
     },
     {
-      "coursName": "obedience class",
-      "courseNumber": "2",
+      "courseName": "obedience class",
+      "courseNumber": 2,
       "duration": 5,
       "classRoom": false,
       "distans": true,
-      "image": "miniature-schnauzer.jpg",
+      "imageUrl": "miniature-schnauzer.jpg",
       "startDate": "2025-05-10",
-      "popular": false
+      "popular": false,
+      "id": "4689"
     },
     {
-      "coursName": "Bird watching",
-      "courseNumber": "3",
+      "courseName": "Bird watching",
+      "courseNumber": 3,
       "duration": 3,
       "classRoom": true,
       "distans": false,
-      "image": "naturePhotographers.jpg",
+      "imageUrl": "naturePhotographers.jpg",
       "startDate": "2025-09-11",
-      "popular": false
+      "popular": false,
+      "id": "7945"
     },
     {
-      "coursName": "Painting class",
-      "courseNumber": "4",
+      "courseName": "Painting class",
+      "courseNumber": 4,
       "duration": 15,
       "classRoom": false,
       "distans": true,
-      "image": "paint1",
+      "imageUrl": "paint1",
       "startDate": "2025-07-15",
-      "popular": true
+      "popular": true,
+      "id": "1237"
     },
     {
-      "coursName": "Cooking class",
-      "courseNumber": "5",
+      "courseName": "Cooking class",
+      "courseNumber": 5,
       "duration": 5,
       "classRoom": true,
       "distans": false,
-      "image": "paint1",
+      "imageUrl": "paint1",
       "startDate": "2025-07-15",
-      "popular": false
+      "popular": false,
+      "id": "3457"
     },
     {
-      "coursName": "Survive in the wilderness",
-      "courseNumber": "6",
+      "courseName": "Survive in the wilderness",
+      "courseNumber": 6,
       "duration": 5,
       "classRoom": false,
       "distans": true,
-      "image": "wilderness.jpg",
+      "imageUrl": "wilderness.jpg",
       "startDate": "2025-03-15",
-      "popular": true
+      "popular": true,
+      "id": "1234"
     }
   ],
   "registration": [
     {
       "id": "c06e",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "2400",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "3114",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "552d",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "b8f8",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "7572",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "1402",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
       "id": "8400",
       "userName": "matilda",
-      "passWord": null
+      "passWord": "12345"
     },
     {
-      "id": "28ee",
+      "id": "7c7e",
       "userName": "matilda",
-      "passWord": null
-    },
-    {
-      "id": "b113",
-      "userName": "matilda",
-      "passWord": null
-    },
-    {
-      "id": "205c",
-      "userName": "matilda",
-      "passWord": null
-    },
-    {
-      "id": "409f",
-      "userName": "matilda",
-      "passWord": null
-    },
-    {
-      "id": "6a8f",
-      "userName": "matilda",
-      "passWord": "sundwipfapjgå"
-    },
-    {
-      "id": "cb3d",
-      "userName": "matilda",
-      "passWord": "sundwipfapjgå"
+      "passWord": "huho"
     }
   ],
   "costumerOrders": []

@@ -1,10 +1,11 @@
 export interface ICourses {
-  id: string;
+  id: number;
+  imageUrl: string;
   courseNumber: number;
   courseName: string;
   duration: number;
-  classRoom: false;
-  distans: true;
+  classRoom: boolean;
+  distans: boolean;
   startDate: string;
-  popular: true;
+  popular: boolean;
 }

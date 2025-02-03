@@ -1,5 +1,5 @@
 const registrationForm = document.querySelector('#registerForm');
-const initapp = () => { };
+const initApp = () => { };
 const loggIn = async (e) => {
     e.preventDefault();
     if (registrationForm === null)
@@ -30,6 +30,6 @@ const loggIn = async (e) => {
     }
     localStorage.setItem('User', JSON.stringify(user));
 };
-document.addEventListener('DOMContentLoaded', initapp);
+document.addEventListener('DOMContentLoaded', initApp);
 registrationForm.addEventListener('submit', loggIn);
 export {};

@@ -4,7 +4,7 @@ const registrationForm = document.querySelector(
   '#registerForm'
 ) as HTMLFormElement;
 
-const initapp = () => {};
+const initApp = () => {};
 
 const loggIn = async (e: SubmitEvent) => {
   e.preventDefault();
@@ -40,5 +40,5 @@ const loggIn = async (e: SubmitEvent) => {
   localStorage.setItem('User', JSON.stringify(user));
 };
 
-document.addEventListener('DOMContentLoaded', initapp);
+document.addEventListener('DOMContentLoaded', initApp);
 registrationForm!.addEventListener('submit', loggIn);
