@@ -8,7 +8,7 @@ export const courses = [
         imageUrl: 'beer.jpg',
         startDate: '2025-04-10',
         popular: true,
-        id: 7384,
+        id: '1',
     },
     {
         courseName: 'obedience class',
@@ -19,7 +19,7 @@ export const courses = [
         imageUrl: 'miniature-schnauzer.jpg',
         startDate: '2025-05-10',
         popular: false,
-        id: 4689,
+        id: '2',
     },
     {
         courseName: 'Bird watching',
@@ -30,7 +30,7 @@ export const courses = [
         imageUrl: 'naturePhotographers.jpg',
         startDate: '2025-09-11',
         popular: false,
-        id: 7945,
+        id: '3',
     },
     {
         courseName: 'Painting class',
@@ -41,7 +41,7 @@ export const courses = [
         imageUrl: 'paint1',
         startDate: '2025-07-15',
         popular: true,
-        id: 1237,
+        id: '4',
     },
     {
         courseName: 'Cooking class',
@@ -52,7 +52,7 @@ export const courses = [
         imageUrl: 'paint1',
         startDate: '2025-07-15',
         popular: false,
-        id: 3457,
+        id: '5',
     },
     {
         courseName: 'Survive in the wilderness',
@@ -63,6 +63,6 @@ export const courses = [
         imageUrl: 'wilderness.jpg',
         startDate: '2025-03-15',
         popular: true,
-        id: 1234,
+        id: '6',
     },
 ];
