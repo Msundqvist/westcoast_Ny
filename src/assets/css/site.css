@@ -143,21 +143,41 @@ a {
 }
 
 #details img {
-  width: 400px;
+  width: 200px;
   height: auto;
   object-fit: cover;
 }
 
 #details p {
-  margin: 1.25rem 0;
   font-size: 1.1rem;
 }
 
 #details .info {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
-#details .rating {
-  color: var(--accent-color);
-  font-weight: bold;
+#details .boolean {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+#addToBooked {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #7b1fa2;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  border: solid 1px #f4f4f4;
+  outline: none !important;
+  cursor: pointer;
+  width: 10rem;
 }
