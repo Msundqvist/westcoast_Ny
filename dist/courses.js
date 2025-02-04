@@ -33,7 +33,6 @@ const displayCourse = (courses) => {
         small.textContent = `Kursstart: ${course.startDate}`;
         p.appendChild(small);
         cardBody.append(heading);
-        cardBody.append(imageurl);
         cardBody.append(p);
         div.append(cardBody);
         app.appendChild(div);

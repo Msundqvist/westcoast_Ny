@@ -4,7 +4,9 @@ const registrationForm = document.querySelector(
   '#registerForm'
 ) as HTMLFormElement;
 
-const initApp = () => {};
+const initApp = () => {
+  loggIn;
+};
 
 const loggIn = async (e: SubmitEvent) => {
   e.preventDefault();
@@ -12,17 +14,10 @@ const loggIn = async (e: SubmitEvent) => {
   if (registrationForm === null) return;
 
   const data = new FormData(registrationForm);
-  //   const formData = Object.fromEntries(data);
-  //   formData.id = crypto.randomUUID();
-  //   console.log(formData.id);
 
   const user: IRegistration = {
     userName: data.get('userName') as string,
     passWord: data.get('password') as string,
-
-    // id: formData.id,
-    // userName: formData.userName.toString(),
-    // passWord: formData.passWord.toString(),
   };
 
   try {

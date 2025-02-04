@@ -7,6 +7,7 @@ const initApp = () => {
 const listCourses = () => {
   displayCourse(courses);
 };
+
 // skapade första delen av en funktion för att byta ut document.create...
 const createElement = (element: string): HTMLElement => {
   return document.createElement(element);
@@ -26,7 +27,6 @@ const displayCourse = (courses: Array<ICourses>) => {
 
     div.classList.add('card');
     imageAnchor.href = `./course-details.html?courseNumber=${course.courseNumber}`;
-
     imageurl.alt = `${course.courseName}`;
     imageurl.src = `/src/assets/images/${course.imageUrl}`;
 
@@ -42,7 +42,6 @@ const displayCourse = (courses: Array<ICourses>) => {
     p.appendChild(small);
 
     cardBody.append(heading);
-    cardBody.append(imageurl);
     cardBody.append(p);
 
     div.append(cardBody);
