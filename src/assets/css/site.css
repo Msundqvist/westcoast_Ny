@@ -34,6 +34,37 @@ h3 {
 a {
   text-decoration: none;
 }
+#courses {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.course-image {
+  border: solid 1px #ef6c00;
+  background: #fff;
+  min-width: 300px;
+
+  border-radius: 0.5rem;
+}
+
+.course-image img {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  width: 100%;
+}
+
+.course-image p {
+  text-align: center;
+  font-style: italic;
+}
 /* =======================
   COURSE TITLE
 ======================= */
@@ -80,8 +111,53 @@ a {
   padding: 0.7rem;
   font-size: 1.25rem;
 }
+.btn {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  background: #cf3d3d;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  margin: 1rem 0rem;
+  width: 100%;
+}
 
 .card:hover {
   transform: scale(1.05);
   background: #2262ec;
+}
+/* =======================
+  COURSE DETAILS
+======================= */
+#details .details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+}
+
+#details img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+#details p {
+  margin: 1.25rem 0;
+  font-size: 1.1rem;
+}
+
+#details .info {
+  width: 100%;
+}
+
+#details .rating {
+  color: var(--accent-color);
+  font-weight: bold;
 }

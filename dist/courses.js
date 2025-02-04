@@ -14,27 +14,27 @@ const displayCourse = (courses) => {
     app.innerHTML = '';
     for (let course of courses) {
         const div = createElement('div');
+        const imageAnchor = createElement('a');
         const imageurl = createElement('img');
         const cardBody = createElement('div');
-        const boolean = createElement('div');
         const heading = createElement('h5');
         const p = createElement('p');
         const small = createElement('small');
         div.classList.add('card');
+        imageAnchor.href = `./course-details.html?courseNumber=${course.courseNumber}`;
         imageurl.alt = `${course.courseName}`;
         imageurl.src = `/src/assets/images/${course.imageUrl}`;
+        imageAnchor.appendChild(imageurl);
+        div.appendChild(imageAnchor);
         cardBody.classList.add('card-body');
         heading.classList.add('card-title');
         heading.textContent = course.courseName;
         p.classList.add('card-text');
-        small.textContent = `Kursstart: ${course.startDate} `;
+        small.textContent = `Kursstart: ${course.startDate}`;
         p.appendChild(small);
-        boolean.classList.add('boolean');
-        boolean.textContent = `populär: ${course.popular}  Klassrum: ${course.classRoom} Distans: ${course.distans}`;
         cardBody.append(heading);
         cardBody.append(imageurl);
         cardBody.append(p);
-        cardBody.append(boolean);
         div.append(cardBody);
         app.appendChild(div);
     }

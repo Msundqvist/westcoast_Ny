@@ -17,32 +17,33 @@ const displayCourse = (courses: Array<ICourses>) => {
 
   for (let course of courses) {
     const div = createElement('div') as HTMLDivElement;
+    const imageAnchor = createElement('a') as HTMLAnchorElement;
     const imageurl = createElement('img') as HTMLImageElement;
     const cardBody = createElement('div') as HTMLDivElement;
-    const boolean = createElement('div') as HTMLDivElement;
     const heading = createElement('h5') as HTMLHeadingElement;
     const p = createElement('p') as HTMLParagraphElement;
     const small = createElement('small') as HTMLElement;
 
     div.classList.add('card');
+    imageAnchor.href = `./course-details.html?courseNumber=${course.courseNumber}`;
 
     imageurl.alt = `${course.courseName}`;
     imageurl.src = `/src/assets/images/${course.imageUrl}`;
+
+    imageAnchor.appendChild(imageurl);
+    div.appendChild(imageAnchor);
 
     cardBody.classList.add('card-body');
     heading.classList.add('card-title');
     heading.textContent = course.courseName;
 
     p.classList.add('card-text');
-    small.textContent = `Kursstart: ${course.startDate} `;
+    small.textContent = `Kursstart: ${course.startDate}`;
     p.appendChild(small);
-    boolean.classList.add('boolean');
-    boolean.textContent = `populär: ${course.popular}  Klassrum: ${course.classRoom} Distans: ${course.distans}`;
 
     cardBody.append(heading);
     cardBody.append(imageurl);
     cardBody.append(p);
-    cardBody.append(boolean);
 
     div.append(cardBody);
 
