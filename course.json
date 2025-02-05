@@ -82,21 +82,6 @@
       "studentName": "Michael",
       "email": "michael@gmail.com",
       "id": "e8d8"
-    },
-    {
-      "id": "4e0e",
-      "userName": "gunnar",
-      "email": "gunnar@gmail.com"
-    },
-    {
-      "id": "e2a5",
-      "userName": "gustav",
-      "email": "gustav@gmail.com"
-    },
-    {
-      "id": "2c6f",
-      "studentName": null,
-      "email": "matilda@gmail.com"
     }
   ],
   "costumerOrders": []
