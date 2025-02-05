@@ -1,5 +1,6 @@
 export interface IRegistration {
-//   id: string;
-  userName: string;
-  passWord: string;
+  courseName: string;
+  billingAdress: string;
+  email: string;
+  mobileNumber: number;
 }

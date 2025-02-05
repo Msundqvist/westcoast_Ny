@@ -1,5 +1,7 @@
 import { courses } from './data/courses.js';
 const addCoursebutton = document.querySelector('#addToBooked');
+document.querySelector('#cartItem');
+let isInEditmode = false;
 const initApp = () => {
     findCourse();
 };
@@ -18,6 +20,8 @@ const findCourse = () => {
         console.log('Error');
     }
 };
+const addToCart = (e) => { };
+const updateCart = () => { };
 const generateHtmlCourse = (course) => {
     const div = document.createElement('div');
     div.innerHTML = `

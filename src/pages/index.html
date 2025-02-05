@@ -11,7 +11,10 @@
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
-    <script type="module" src="../../dist/registration.js" defer></script>
+ <script type="module" src="../loggin.js"defer>
+ </script>
+
+ 
     <title>Westcoast Education</title>
   </head>
   <body>
@@ -38,11 +41,11 @@
               <a href="/src/pages/courses.html">Våra klasser</a>
             </li>
             <li class="menu-item">
-              <a href="/src/pages/coustumer-registration.html"
-                ><i class="fa-solid fa-cart-shopping"></i>(<span id="cartItem"
-                  >0</span
-                >)</a
-              >
+              <a href="../pages/coustumer-registration.html">Boka kurs</a>
+            </li>
+            <li class="menu-item">
+              <a href="../pages/registration.html">Registering</a>
+            </li>
             </li>
           </ul>
         </div>
@@ -51,22 +54,20 @@
     <main>
       <div class="page-background"></div>
       <section id="form">
-        <h1>Skapa en ny användare</h1>
-        <form id="registerForm">
+        <h1>Logga in</h1>
+        <form id="logginForm">
           <div class="form-control">
-            <label for="userName">Användarnamn</label>
-            <input id="userName" type="text" name="userName" id="userName" />
+            <label for="studentName">Namn</label>
+            <input id="studentName" type="text" name="studentName" id="studentName" />
           </div>
           <div class="form-control">
-            <label for="password">Lösenord</label>
+            <label for="email">email</label>
             <input
-              id="password"
-              type="password"
-              name="password"
-              id="password"
-              required />
+              id="email"
+              type="email"
+              name="email"/>
           </div>
-          <button id="buttonSubmit" class="btn" type="submit">logga in</button>
+          <button id="loggIn" class="btn" >logga in</button>
         </form>
       </section>
     </main>

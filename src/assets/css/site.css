@@ -181,3 +181,48 @@ a {
   cursor: pointer;
   width: 10rem;
 }
+#buttonSubmit {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #7b1fa2;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  border: solid 1px #f4f4f4;
+  outline: none !important;
+  cursor: pointer;
+  width: 10rem;
+}
+#registerForm {
+  padding: 1.88rem 0;
+  margin: 0 1rem;
+}
+#registerForm .form-control {
+  margin-bottom: 1rem;
+}
+
+#registerForm label {
+  display: block;
+}
+
+#registerForm input {
+  width: 100%;
+  padding: 0.63rem;
+  border: solid 1px #ddd;
+}
+
+#registerForm input:focus {
+  outline: none !important;
+  border: solid 1px #ef6c00;
+}
+
+/* Media Queries */
+/* min-width: 768px */
+@media (min-width: 768px) {
+  #registerForm {
+    max-width: 600px;
+    margin: auto;
+  }
+}

@@ -1,39 +1,39 @@
-import { IRegistration } from './models/IRegistration.js';
+import { IStudent } from './models/IStudent.js';
 
 const registrationForm = document.querySelector(
   '#registerForm'
 ) as HTMLFormElement;
 
 const initApp = () => {
-  loggIn;
+  register;
 };
 
-const loggIn = async (e: SubmitEvent) => {
+const register = async (e: SubmitEvent) => {
   e.preventDefault();
 
   if (registrationForm === null) return;
 
   const data = new FormData(registrationForm);
 
-  const user: IRegistration = {
-    userName: data.get('userName') as string,
-    passWord: data.get('password') as string,
+  const user: IStudent = {
+    studentName: data.get('studentName') as string,
+    email: data.get('email') as string,
   };
 
   try {
-    await fetch('http://localhost:3000/registration', {
+    await fetch('http://localhost:3000/student', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/js',
       },
       body: JSON.stringify(user),
     });
-    location.href = './courses.html';
+    location.href = './index.html';
   } catch (error) {
     console.log(error);
   }
-  localStorage.setItem('User', JSON.stringify(user));
+  localStorage.setItem('Student', JSON.stringify(user));
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
-registrationForm!.addEventListener('submit', loggIn);
+registrationForm!.addEventListener('submit', register);

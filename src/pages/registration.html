@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/site.css" />
     <link rel="stylesheet" href="../assets/css/colors.css" />
     <link rel="stylesheet" href="../assets/css/navigation.css" />
     <link rel="stylesheet" href="../assets/css/form.css" />
     <link rel="stylesheet" href="../assets/css/button.css" />
-    <title>Document</title>
-  </head>
-  <body>
+    <script
+      src="https://kit.fontawesome.com/55174c58a9.js"
+      crossorigin="anonymous"></script>
+    <script type="module" src="../../dist/registration.js" defer></script>
+    <title>registrering</title>
+</head>
+<body>
     <header>
       <nav>
         <div class="container">
@@ -45,22 +49,17 @@
       </nav>
     </header>
     <main>
-      <h1 class="page-title">Betala och checka ut</h1>
-      <form id="form">
+      <h1 class="page-title">Registrera dig</h1>
+      <form id="registerForm">
         <div class="form-control">
-          <label for="fullName">För och Efternamn</label>
-          <input type="text" name="fullName" id="fullName" />
-        </div>
-        <div class="form-control">
-          <label for="billingAdress">Fakturaadress</label>
-          <input type="text" name="billingAdress" id="billingAdress" />
+          <label for="userName">förnamn</label>
+          <input type="text" name="userName" id="userName" />
         </div>
         <div class="form-control">
           <label for="email">E-Post</label>
           <input type="email" name="email" id="email" />
         </div>
-        <section id="courses"></section>
-        <button class="btn" type="submit">Boka</button>
+        <button id="buttonSubmit" class="btn" type="submit">Registrera dig</button>
       </form>
     </main>
   </body>

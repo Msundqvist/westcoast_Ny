@@ -1,31 +1,31 @@
 const registrationForm = document.querySelector('#registerForm');
 const initApp = () => {
-    loggIn;
+    register;
 };
-const loggIn = async (e) => {
+const register = async (e) => {
     e.preventDefault();
     if (registrationForm === null)
         return;
     const data = new FormData(registrationForm);
     const user = {
-        userName: data.get('userName'),
-        passWord: data.get('password'),
+        studentName: data.get('studentName'),
+        email: data.get('email'),
     };
     try {
-        await fetch('http://localhost:3000/registration', {
+        await fetch('http://localhost:3000/student', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/js',
             },
             body: JSON.stringify(user),
         });
-        location.href = './courses.html';
+        location.href = './index.html';
     }
     catch (error) {
         console.log(error);
     }
-    localStorage.setItem('User', JSON.stringify(user));
+    localStorage.setItem('Student', JSON.stringify(user));
 };
 document.addEventListener('DOMContentLoaded', initApp);
-registrationForm.addEventListener('submit', loggIn);
+registrationForm.addEventListener('submit', register);
 export {};

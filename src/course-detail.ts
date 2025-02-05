@@ -2,6 +2,8 @@ import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
 const addCoursebutton =
   document.querySelector<HTMLButtonElement>('#addToBooked');
+document.querySelector<HTMLSpanElement>('#cartItem');
+let isInEditmode = false;
 
 const initApp = () => {
   findCourse();
@@ -22,6 +24,8 @@ const findCourse = (): void => {
     console.log('Error');
   }
 };
+const addToCart = (e: any) => {};
+const updateCart = () => {};
 
 const generateHtmlCourse = (course: ICourses) => {
   const div = document.createElement('div');
