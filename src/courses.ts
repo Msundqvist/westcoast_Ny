@@ -1,5 +1,4 @@
 import { courses } from './data/courses.js';
-import { ICourses } from './models/ICourses.js';
 import { createElement, displayCourse } from './utilities/dom.js';
 const initApp = () => {
   listCourses();
