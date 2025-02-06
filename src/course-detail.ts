@@ -1,18 +1,10 @@
 import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
-const addCoursebutton =
-  document.querySelector<HTMLButtonElement>('#addToBooked');
-document.querySelector<HTMLSpanElement>('#cartItem');
-let isInEditmode = false;
+const addCoursebutton = document.querySelector<HTMLFormElement>('#addToBooked');
 
 const initApp = () => {
   findCourse();
 };
-
-// const getcartcourses = (): ICourses[] => {
-//   const course: ICourses[] = JSON.parse(localStorage.getItem('cart')!) ?? [];
-//   return course;
-// };
 
 const findCourse = (): void => {
   const courseNumber = location.search.split('=')[1];
@@ -24,8 +16,6 @@ const findCourse = (): void => {
     console.log('Error');
   }
 };
-const addToCart = (e: any) => {};
-const updateCart = () => {};
 
 const generateHtmlCourse = (course: ICourses) => {
   const div = document.createElement('div');
@@ -56,6 +46,17 @@ const generateHtmlCourse = (course: ICourses) => {
 
 const displayCourse = (course: ICourses) => {
   document.querySelector('#details')!.appendChild(generateHtmlCourse(course));
+};
+
+const addToCart = async (e: any) => {
+  const url = 'http://localhost:3000/courses?id=';
+  const response = await fetch(url);
+  if (response.ok) {
+    const course = await response.json();
+    location.href = './coustumer-registration.html';
+    localStorage.setItem('costumerOrders', JSON.stringify(course));
+  }
+  e.preventDefault();
 };
 addCoursebutton?.addEventListener('click', addToCart);
 document.addEventListener('DOMContentLoaded', initApp);

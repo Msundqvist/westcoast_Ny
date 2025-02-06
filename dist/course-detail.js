@@ -1,14 +1,8 @@
 import { courses } from './data/courses.js';
 const addCoursebutton = document.querySelector('#addToBooked');
-document.querySelector('#cartItem');
-let isInEditmode = false;
 const initApp = () => {
     findCourse();
 };
-// const getcartcourses = (): ICourses[] => {
-//   const course: ICourses[] = JSON.parse(localStorage.getItem('cart')!) ?? [];
-//   return course;
-// };
 const findCourse = () => {
     const courseNumber = location.search.split('=')[1];
     // med plustecknet ändrar man om datatypen. i dettafall number till string
@@ -20,8 +14,6 @@ const findCourse = () => {
         console.log('Error');
     }
 };
-const addToCart = (e) => { };
-const updateCart = () => { };
 const generateHtmlCourse = (course) => {
     const div = document.createElement('div');
     div.innerHTML = `
@@ -47,6 +39,16 @@ const generateHtmlCourse = (course) => {
 };
 const displayCourse = (course) => {
     document.querySelector('#details').appendChild(generateHtmlCourse(course));
+};
+const addToCart = async (e) => {
+    const url = 'http://localhost:3000/courses?id=';
+    const response = await fetch(url);
+    if (response.ok) {
+        const course = await response.json();
+        location.href = './coustumer-registration.html';
+        localStorage.setItem('costumerOrders', JSON.stringify(course));
+    }
+    e.preventDefault();
 };
 addCoursebutton?.addEventListener('click', addToCart);
 document.addEventListener('DOMContentLoaded', initApp);
