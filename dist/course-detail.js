@@ -18,10 +18,12 @@ const findCourse = () => {
 const displayCourse = (course) => {
     document.querySelector('#details').appendChild(generateHtmlCourse(course));
 };
-const addToCart = () => {
+const getlocationcourse = () => {
     const url = location.search.split('=')[1];
-    console.log(url);
     location.href = `./coustumer-registration.html?id=${url}`;
+};
+const addToCart = () => {
+    getlocationcourse();
 };
 addCoursebutton?.addEventListener('click', addToCart);
 document.addEventListener('DOMContentLoaded', initApp);

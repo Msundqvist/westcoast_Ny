@@ -10,7 +10,7 @@ export const courses: ICourses[] = [
     imageUrl: 'beer.jpg',
     startDate: '2025-04-10',
     popular: true,
-    id: '1',
+    id: 1,
   },
   {
     courseName: 'obedience class',
@@ -21,7 +21,7 @@ export const courses: ICourses[] = [
     imageUrl: 'miniature-schnauzer.jpg',
     startDate: '2025-05-10',
     popular: false,
-    id: '2',
+    id: 2,
   },
   {
     courseName: 'Bird watching',
@@ -32,7 +32,7 @@ export const courses: ICourses[] = [
     imageUrl: 'naturePhotographers.jpg',
     startDate: '2025-09-11',
     popular: false,
-    id: '30',
+    id: 3,
   },
   {
     courseName: 'Painting class',
@@ -43,7 +43,7 @@ export const courses: ICourses[] = [
     imageUrl: 'painting.jpg',
     startDate: '2025-07-15',
     popular: true,
-    id: '40',
+    id: 4,
   },
   {
     courseName: 'Cooking class',
@@ -54,7 +54,7 @@ export const courses: ICourses[] = [
     imageUrl: 'food.jpg',
     startDate: '2025-07-15',
     popular: false,
-    id: '5',
+    id: 5,
   },
   {
     courseName: 'Survive in the wilderness',
@@ -65,6 +65,6 @@ export const courses: ICourses[] = [
     imageUrl: 'wildernessgirl.jpg',
     startDate: '2025-03-15',
     popular: true,
-    id: '6',
+    id: 6,
   },
 ];

@@ -1,6 +1,6 @@
 export interface IRegistration {
-  courseName: string;
+  fullName: string;
   billingAdress: string;
   email: string;
-  mobileNumber: number;
+  mobileNumber: string;
 }
