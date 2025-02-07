@@ -6,7 +6,8 @@ const addcourseForm = document.querySelector(
 const initApp = () => {};
 const verifyAddedCourse = async (courses: ICourses) => {
   const httpClient = new HttpClient('http://localhost:300/courses?');
-  return await httpClient.Get();
+  await httpClient.Get();
+  return courses;
 };
 
 const addNewcourse = async (course: ICourses) => {
@@ -35,10 +36,16 @@ const addNewcourse = async (course: ICourses) => {
     throw new Error('du har skrivit fel användaruppgifter');
   }
 };
+
+const formControl = async () => {
+  const filter: string =
+    document.querySelector<HTMLInputElement>('#item-input')!.value;
+  if (filter.trim().length === 0) {
+    displayErrorMessage();
+  }
+};
 const handleAddCourse = async (e: SubmitEvent) => {
   e.preventDefault();
-
-  if (addcourseForm.length === 0) return displayErrorMessage();
   const data = new FormData(addcourseForm);
   const formdata = Object.fromEntries(data);
 
@@ -53,8 +60,8 @@ const handleAddCourse = async (e: SubmitEvent) => {
     duration: +formdata.duration.toString(),
     imageUrl: data.get('imageUrl') as string,
   };
-  verifyAddedCourse(course);
   addNewcourse(course);
+  await formControl();
 };
 const displayErrorMessage = () => {
   console.log('fel');
