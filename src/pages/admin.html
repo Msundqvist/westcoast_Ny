@@ -12,7 +12,7 @@
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
     <script type="module" src="../../dist/addcourse.js" defer></script>
-    <title>registrering</title>
+    <title>Admin</title>
 </head>
 <body>
     <header>
@@ -53,30 +53,38 @@
       <form id="addCourseForm">
         <div class="form-control">
           <label for="coursName">kursnamn</label>
-          <input type="text" name="studentName" id="studentName" />
+          <input type="text" name="courseName" id="courseName" />
         </div>
         <div class="form-control">
           <label for="courseNumber">kursnummer</label>
           <input type="number" name="courseNumber" id="courseNumber" />
         </div>
         <div class="form-control">
-            <label for="id">id</label>
+            <label for="id">Kurs id</label>
             <input type="number" name="id" id="id" />
           </div>
           <div class="form-control">
+            <label for="duration">Antal dagar</label>
+            <input type="number" name="duration" id="duration" />
+          </div>
+          <div class="form-control">
             <label for="classRoom">Klassrum</label>
-            <input type="boolean" name="boolean-parameter" id="classRoom" placeholder="true or false" />
+            <input type="text" name="classRoom" id="classRoom" placeholder="ja eller nej" />
           </div>
           <div class="form-control">
             <label for="distans">Distans</label>
-            <input type="boolean" name="boolean-parameter" id="distans" placeholder="true or false" />
+            <input type="text" name="distans" id="distans" placeholder="ja eller nej" />
           </div>
           <div class="form-control">
             <label for="popular">Populär</label>
-            <input type="boolean" name="boolean-parameter" id="popular" placeholder="true or false" />
+            <input type="text" name="popular" id="popular" placeholder="ja eller nej" />
           </div>
           <div class="form-control">
-            <label for="startDate">kursnummer</label>
+            <label for="imageUrl">bild</label>
+            <input type="checkbox" name="imageUrl" id="imageUrl" value="paint1.jpg"/>
+          </div>
+          <div class="form-control">
+            <label for="startDate">Kursstart</label>
             <input type="text" name="startDate" id="startDate" />
           </div>
         <button id="buttonSubmit" class="btn" type="submit">lägg till klass</button>

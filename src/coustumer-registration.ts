@@ -7,7 +7,6 @@ import { HttpClient } from './utilities/httpClient.js';
 const formCheckout = document.querySelector<HTMLFormElement>('#form');
 
 let courseId = 0;
-let courses: ICourses[];
 
 const initApp = () => {
   courseId = +location.search.split('=')[1];

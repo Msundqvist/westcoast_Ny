@@ -2,7 +2,6 @@ import { createElement } from './utilities/dom.js';
 import { HttpClient } from './utilities/httpClient.js';
 const formCheckout = document.querySelector('#form');
 let courseId = 0;
-let courses;
 const initApp = () => {
     courseId = +location.search.split('=')[1];
     console.log(courseId);

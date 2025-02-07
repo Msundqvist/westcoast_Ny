@@ -4,8 +4,8 @@ export interface ICourses {
   courseNumber: number;
   courseName: string;
   duration: number;
-  classRoom: boolean;
-  distans: boolean;
+  classRoom: string;
+  distans: string;
   startDate: string;
-  popular: boolean;
+  popular: string;
 }

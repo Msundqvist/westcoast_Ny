@@ -1,4 +1,3 @@
-import { student } from './data/student.js';
 import { IStudent } from './models/IStudent.js';
 
 const registrationForm = document.querySelector(
