@@ -87,6 +87,17 @@
       "startDate": "20-05-26",
       "duration": 20,
       "imageUrl": "paint1.jpg"
+    },
+    {
+      "id": 0,
+      "courseName": "",
+      "courseNumber": 0,
+      "duration": 0,
+      "classRoom": "",
+      "popular": "",
+      "distans": "",
+      "imageUrl": null,
+      "startDate": ""
     }
   ],
   "student": [

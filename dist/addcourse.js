@@ -1,11 +1,5 @@
-import { HttpClient } from './utilities/httpClient.js';
 const addcourseForm = document.querySelector('#addCourseForm');
 const initApp = () => { };
-const verifyAddedCourse = async (courses) => {
-    const httpClient = new HttpClient('http://localhost:300/courses?');
-    await httpClient.Get();
-    return courses;
-};
 const addNewcourse = async (course) => {
     const addCourse = {
         courseName: course.courseName,
@@ -62,3 +56,4 @@ const displayErrorMessage = () => {
 };
 document.addEventListener('DOMContentLoaded', initApp);
 addcourseForm.addEventListener('submit', handleAddCourse);
+export {};

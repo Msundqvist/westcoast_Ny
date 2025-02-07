@@ -1,14 +1,10 @@
+import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
 import { HttpClient } from './utilities/httpClient.js';
 const addcourseForm = document.querySelector(
   '#addCourseForm'
 ) as HTMLFormElement;
 const initApp = () => {};
-const verifyAddedCourse = async (courses: ICourses) => {
-  const httpClient = new HttpClient('http://localhost:300/courses?');
-  await httpClient.Get();
-  return courses;
-};
 
 const addNewcourse = async (course: ICourses) => {
   const addCourse = {
