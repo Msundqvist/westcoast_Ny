@@ -1,13 +1,11 @@
-const loginInput = document.querySelector('#email');
+const loginInput = document.querySelector('#input-item');
 const loggInbutton = document.querySelector('#loggIn')
 
 const initApp = () => { };
 
-const findStudent = async (email, studentName) => {
+const findStudent = async (email) => {
   const url = 'http://localhost:3000/student?email=' +
-    email +
-    '&studentName=' +
-    studentName
+    email
   const response = await fetch(url);
   if (response.ok) {
     const student = await response.json();
@@ -22,8 +20,7 @@ const findStudent = async (email, studentName) => {
 };
 const handleStudent = () => {
   const email = loginInput.value
-  const studentName = loginInput.value
-  findStudent(email, studentName)
+  findStudent(email)
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
