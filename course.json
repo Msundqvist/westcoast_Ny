@@ -9,7 +9,7 @@
       "imageUrl": "beer.jpg",
       "startDate": "2025-04-10",
       "popular": true,
-      "id": 1
+      "id": "1"
     },
     {
       "courseName": "obedience class",
@@ -20,7 +20,7 @@
       "imageUrl": "miniature-schnauzer.jpg",
       "startDate": "2025-05-10",
       "popular": false,
-      "id": 2
+      "id": "2"
     },
     {
       "courseName": "Bird watching",
@@ -31,7 +31,7 @@
       "imageUrl": "naturePhotographers.jpg",
       "startDate": "2025-09-11",
       "popular": false,
-      "id": 3
+      "id": "3"
     },
     {
       "courseName": "Painting class",
@@ -42,7 +42,7 @@
       "imageUrl": "painting.jpg",
       "startDate": "2025-07-15",
       "popular": true,
-      "id": 4
+      "id": "4"
     },
     {
       "courseName": "Cooking class",
@@ -53,7 +53,7 @@
       "imageUrl": "food.jpg",
       "startDate": "2025-07-15",
       "popular": false,
-      "id": 5
+      "id": "5"
     },
     {
       "courseName": "Survive in the wilderness",
@@ -64,7 +64,7 @@
       "imageUrl": "wildernessgirl.jpg",
       "startDate": "2025-03-15",
       "popular": true,
-      "id": 6
+      "id": "6"
     }
   ],
   "student": [
@@ -87,7 +87,148 @@
       "id": "01b3",
       "studentName": "",
       "email": "bertil@gmail.com"
+    },
+    {
+      "id": "a401",
+      "studentName": null,
+      "email": "epple@gmail.com"
     }
   ],
-  "costumerOrders": [{}]
+  "bookings": [
+    {
+      "courseId": 1,
+      "studentEmail": "",
+      "id": "bed9"
+    },
+    {
+      "id": "7cfa",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 3
+    },
+    {
+      "id": "8a26",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 3
+    },
+    {
+      "id": "84e6",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 3
+    },
+    {
+      "id": "f1c2",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "f05c",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "8bff",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "8c79",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "1e04",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "904f",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "eb17",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "78a1",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "02ec",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "31ef",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "c56a",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "9dfb",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "c691",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "a2b2",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "9466",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "2554",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "989d",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "db22",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "3250",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "779e",
+      "studentEmail": "bertil@gmail.com",
+      "courseId": 1
+    },
+    {
+      "id": "a28a",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "f720",
+      "studentEmail": "epple@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "150e",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 2
+    }
+  ]
 }

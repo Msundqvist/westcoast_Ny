@@ -1,3 +1,3 @@
-export const addToStorage = (courseNumber) => {
-    localStorage.setItem('costumerOrders', JSON.stringify(courseNumber));
+export const addToStorage = (data) => {
+    localStorage.setItem('costumerOrders', JSON.stringify(data));
 };

@@ -1,5 +1,3 @@
-import { ICourses } from '../models/ICourses';
-
-export const addToStorage = (courseNumber: ICourses) => {
-  localStorage.setItem('costumerOrders', JSON.stringify(courseNumber));
+export const addToStorage = (data: string) => {
+  localStorage.setItem('costumerOrders', JSON.stringify(data));
 };

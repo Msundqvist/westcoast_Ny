@@ -218,6 +218,9 @@ a {
   border: solid 1px #ef6c00;
 }
 
+#displayOrders {
+  display: block;
+}
 /* Media Queries */
 /* min-width: 768px */
 @media (min-width: 768px) {
