@@ -1,12 +1,11 @@
+import { student } from './data/student.js';
 import { IStudent } from './models/IStudent.js';
 
 const registrationForm = document.querySelector(
   '#registerForm'
 ) as HTMLFormElement;
 
-const initApp = () => {
-  register;
-};
+const initApp = () => {};
 
 const register = async (e: SubmitEvent) => {
   e.preventDefault();

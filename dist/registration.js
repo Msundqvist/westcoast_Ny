@@ -1,7 +1,5 @@
 const registrationForm = document.querySelector('#registerForm');
-const initApp = () => {
-    register;
-};
+const initApp = () => { };
 const register = async (e) => {
     e.preventDefault();
     if (registrationForm === null)

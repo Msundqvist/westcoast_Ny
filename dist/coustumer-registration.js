@@ -1,3 +1,4 @@
+import { createElement } from './utilities/dom.js';
 import { HttpClient } from './utilities/httpClient.js';
 const formCheckout = document.querySelector('#form');
 let courseId = 0;
@@ -65,25 +66,24 @@ const bookedCourse = async (courseId) => {
     if (response.ok) {
         const course = await response.json();
         console.log(course);
+        return course;
     }
 };
-// const getBookedCourse = (bookings: Array<IBookings>) => {
-//   const courseList = document.querySelector('#displayOrders') as HTMLDivElement;
-//   courseList.innerHTML = '';
-//   for (let booking of bookings) {
-//     const div = createElement('div') as HTMLDivElement;
-//     const heading = createElement('h5') as HTMLHeadElement;
-//     const p = createElement('p') as HTMLParagraphElement;
-//     div.classList.add('orderDisplay');
-//     heading.classList.add('booked-title');
-//     heading.textContent = `Bokade kurser`;
-//     p.classList.add('booking-text');
-//     p.textContent = `${booking.courseId}`;
-//     div.append(heading);
-//     div.append(p);
-//     courseList.appendChild(div);
-//   }
-// };
+const getBookedCourse = (course) => {
+    const courseList = document.querySelector('#displayOrders');
+    courseList.innerHTML = '';
+    const div = createElement('div');
+    const heading = createElement('h5');
+    const p = createElement('p');
+    div.classList.add('orderDisplay');
+    heading.classList.add('booked-title');
+    heading.textContent = `Bokade kurser`;
+    p.classList.add('booking-text');
+    p.textContent = `${course.courseName}`;
+    div.appendChild(heading);
+    div.appendChild(p);
+    courseList.appendChild(div);
+};
 // const displayBookedCourse = (bookings: Array<IBookings>) => {
 //   bookedCourse(courseId);
 //   bookings.forEach((bookings) => getBookedCourse);
@@ -97,8 +97,8 @@ const handlercheckout = async (e) => {
     const student = await verifyStudent(data.get('email'), data.get('studentName'));
     console.log(student);
     addToBooked(student[0], courseId);
-    //   displayBookedCourse(bookings);
-    bookedCourse(courseId);
+    const course = await bookedCourse(courseId);
+    getBookedCourse(course);
 };
 document.addEventListener('DOMContentLoaded', initApp);
 formCheckout?.addEventListener('submit', handlercheckout);

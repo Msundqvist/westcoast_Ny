@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <link rel="stylesheet" href="../assets/css/colors.css" />
+    <link rel="stylesheet" href="../assets/css/navigation.css" />
+    <link rel="stylesheet" href="../assets/css/form.css" />
+    <link rel="stylesheet" href="../assets/css/button.css" />
+    <script
+      src="https://kit.fontawesome.com/55174c58a9.js"
+      crossorigin="anonymous"></script>
+    <script type="module" src="../../dist/addcourse.js" defer></script>
+    <title>registrering</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a href="./index.html"
+                ><span><i class="fa-solid fa-book-sparkles"></i></span>
+                Westcoast Education</a
+              >
+            </li>
+            <li class="toggle">
+              <input class="menu-btn" type="checkbox" id="menu-btn" />
+              <label class="menu-icon" for="menu-btn"
+                ><span class="nav-icon"></span>
+              </label>
+            </li>
+            <li class="menu-item">
+              <a href="../pages/index.html">Start</a>
+            </li>
+            <li class="menu-item">
+              <a href="/src/pages/courses.html">Våra klasser</a>
+            </li>
+            <li class="menu-item">
+              <a href="../pages/coustumer-registration.html">Boka kurs</a>
+            </li>
+            <li class="menu-item">
+              <a href="../pages/registration.html">Registering</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="page-title">addera kurs</h1>
+      <form id="addCourseForm">
+        <div class="form-control">
+          <label for="coursName">kursnamn</label>
+          <input type="text" name="studentName" id="studentName" />
+        </div>
+        <div class="form-control">
+          <label for="courseNumber">kursnummer</label>
+          <input type="number" name="courseNumber" id="courseNumber" />
+        </div>
+        <div class="form-control">
+            <label for="id">id</label>
+            <input type="number" name="id" id="id" />
+          </div>
+          <div class="form-control">
+            <label for="classRoom">Klassrum</label>
+            <input type="boolean" name="boolean-parameter" id="classRoom" placeholder="true or false" />
+          </div>
+          <div class="form-control">
+            <label for="distans">Distans</label>
+            <input type="boolean" name="boolean-parameter" id="distans" placeholder="true or false" />
+          </div>
+          <div class="form-control">
+            <label for="popular">Populär</label>
+            <input type="boolean" name="boolean-parameter" id="popular" placeholder="true or false" />
+          </div>
+          <div class="form-control">
+            <label for="startDate">kursnummer</label>
+            <input type="text" name="startDate" id="startDate" />
+          </div>
+        <button id="buttonSubmit" class="btn" type="submit">lägg till klass</button>
+      </form>
+    </main>
+  </body>
+</html>
