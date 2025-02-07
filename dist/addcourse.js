@@ -1,3 +1,4 @@
+import { createElement } from './utilities/dom.js';
 const addcourseForm = document.querySelector('#addCourseForm');
 const initApp = () => { };
 const addNewcourse = async (course) => {
@@ -52,8 +53,12 @@ const handleAddCourse = async (e) => {
     await formControl();
 };
 const displayErrorMessage = () => {
-    console.log('fel');
+    const errormsg = document.querySelector('errorMsg');
+    errormsg.innerHTML = '';
+    const div = createElement('div');
+    div.classList.add('errorMsg');
+    div.textContent = `Du har inte fyllt i alla fält!!!`;
+    errormsg.appendChild(div);
 };
 document.addEventListener('DOMContentLoaded', initApp);
 addcourseForm.addEventListener('submit', handleAddCourse);
-export {};

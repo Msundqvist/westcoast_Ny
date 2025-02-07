@@ -227,6 +227,9 @@ a {
 .booked-title h5 {
   font-size: 1.25rem;
 }
+.errorMsg {
+  display: block;
+}
 /* Media Queries */
 /* min-width: 768px */
 @media (min-width: 768px) {

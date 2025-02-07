@@ -1,5 +1,6 @@
 import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
+import { createElement } from './utilities/dom.js';
 import { HttpClient } from './utilities/httpClient.js';
 const addcourseForm = document.querySelector(
   '#addCourseForm'
@@ -40,6 +41,7 @@ const formControl = async () => {
     displayErrorMessage();
   }
 };
+
 const handleAddCourse = async (e: SubmitEvent) => {
   e.preventDefault();
   const data = new FormData(addcourseForm);
@@ -60,7 +62,14 @@ const handleAddCourse = async (e: SubmitEvent) => {
   await formControl();
 };
 const displayErrorMessage = () => {
-  console.log('fel');
+  const errormsg = document.querySelector('errorMsg') as HTMLDivElement;
+  errormsg.innerHTML = '';
+
+  const div = createElement('div') as HTMLDivElement;
+  div.classList.add('errorMsg');
+  div.textContent = `Du har inte fyllt i alla fält!!!`;
+  errormsg.appendChild(div);
 };
+
 document.addEventListener('DOMContentLoaded', initApp);
 addcourseForm.addEventListener('submit', handleAddCourse);
