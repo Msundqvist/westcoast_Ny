@@ -9,17 +9,9 @@ const formCheckout = document.querySelector<HTMLFormElement>('#form');
 let courseId = 0;
 
 const initApp = () => {
-  courseId = +location.search.split('=')[1];
-  console.log(courseId);
   getCourse();
 };
 const getCourse = async () => {
-  //   const url = 'http://localhost:3000/courses/' + courseId;
-  //   const response = await fetch(url);
-  //   if (response.ok) {
-  //     courses = await response.json();
-  //   }
-  //   console.log(courses);
   const httpClient = new HttpClient(
     'http://localhost:3000/courses/' + courseId
   );
@@ -33,17 +25,8 @@ const verifyStudent = async (email: string, studentName: string) => {
       '&studentName=' +
       studentName
   );
-  console.log('fått med båda');
   const student = await httpClient.Get();
-  console.log('fått  med student', student);
   return student;
-  //   return await httpClient.Get();
-
-  //   const url = 'http://localhost:3000/student?email=' + email;
-  //   const response = await fetch(url);
-  //   if (response.ok) {
-  //     return await response.json();
-  //   }
 };
 
 const addToBooked = async (student: IStudent, courseId: number) => {
@@ -52,13 +35,6 @@ const addToBooked = async (student: IStudent, courseId: number) => {
     studentName: student.studentName,
     courseId: courseId,
   };
-  //   try {
-  //     const httpClient = new HttpClient('http://localhost:3000/bookings')
-  //     if (await httpClient.post(booking))console.log('det funkade')
-
-  //   } catch (error) {
-
-  //   }
   const url = 'http://localhost:3000/bookings';
   const response = await fetch(url, {
     method: 'POST',
@@ -78,7 +54,6 @@ const bookedCourse = async (courseId: number) => {
   const response = await fetch(url);
   if (response.ok) {
     const course = await response.json();
-    console.log(course);
     return course;
   }
 };
@@ -102,12 +77,6 @@ const getBookedCourse = (course: ICourses) => {
   courseList.appendChild(div);
 };
 
-// const displayBookedCourse = (bookings: Array<IBookings>) => {
-//   bookedCourse(courseId);
-//   bookings.forEach((bookings) => getBookedCourse);
-//   console.log(bookings);
-// };
-
 const handlercheckout = async (e: SubmitEvent) => {
   e.preventDefault();
   if (formCheckout === null) return;
@@ -116,7 +85,6 @@ const handlercheckout = async (e: SubmitEvent) => {
     data.get('email') as string,
     data.get('studentName') as string
   );
-  console.log(student);
   addToBooked(student[0], courseId);
   const course = await bookedCourse(courseId);
   getBookedCourse(course);

@@ -76,6 +76,17 @@
       "startDate": "26-05-20",
       "duration": 15,
       "imageUrl": "paint1.jpg"
+    },
+    {
+      "id": 10,
+      "courseName": "ridnining",
+      "courseNumber": 10,
+      "classRoom": "nej",
+      "distans": "ja",
+      "popular": "ja",
+      "startDate": "20-05-26",
+      "duration": 20,
+      "imageUrl": "paint1.jpg"
     }
   ],
   "student": [
