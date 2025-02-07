@@ -1,4 +1,4 @@
-import { createElement } from './utilities/dom.js';
+import { HttpClient } from './utilities/httpClient.js';
 const formCheckout = document.querySelector('#form');
 let courseId = 0;
 let courses;
@@ -8,25 +8,34 @@ const initApp = () => {
     getCourse();
 };
 const getCourse = async () => {
-    const url = 'http://localhost:3000/courses/' + courseId;
-    const response = await fetch(url);
-    if (response.ok) {
-        courses = await response.json();
-    }
-    console.log(courses);
+    //   const url = 'http://localhost:3000/courses/' + courseId;
+    //   const response = await fetch(url);
+    //   if (response.ok) {
+    //     courses = await response.json();
+    //   }
+    //   console.log(courses);
+    const httpClient = new HttpClient('http://localhost:3000/courses/' + courseId);
+    return await httpClient.Get();
 };
 const verifyStudent = async (email) => {
-    const url = 'http://localhost:3000/student?email=' + email;
-    const response = await fetch(url);
-    if (response.ok) {
-        return await response.json();
-    }
+    const httpClient = new HttpClient('http://localhost:3000/student?email=' + email);
+    return await httpClient.Get();
+    //   const url = 'http://localhost:3000/student?email=' + email;
+    //   const response = await fetch(url);
+    //   if (response.ok) {
+    //     return await response.json();
+    //   }
 };
-const addToBooked = async (student, id) => {
+const addToBooked = async (student, courseId) => {
     const booking = {
         studentEmail: student.email,
-        courseId: id,
+        courseId: courseId,
     };
+    //   try {
+    //     const httpClient = new HttpClient('http://localhost:3000/bookings')
+    //     if (await httpClient.post(booking))console.log('det funkade')
+    //   } catch (error) {
+    //   }
     const url = 'http://localhost:3000/bookings';
     const response = await fetch(url, {
         method: 'POST',
@@ -47,32 +56,36 @@ const bookedCourse = async (courseId) => {
         console.log(course);
     }
 };
-const getBookedCourse = (bookings) => {
-    const courseList = document.querySelector('#displayOrders');
-    courseList.innerHTML = '';
-    for (let booking of bookings) {
-        const div = createElement('div');
-        const heading = createElement('h5');
-        const p = createElement('p');
-        div.classList.add('orderDisplay');
-        heading.classList.add('book-title');
-        heading.textContent = `Bokade kurser`;
-        p.classList.add('booking-text');
-        p.textContent = `${booking}`;
-        div.append(heading);
-        div.append(p);
-        courseList.appendChild(div);
-    }
-};
+// const getBookedCourse = (bookings: Array<IBookings>) => {
+//   const courseList = document.querySelector('#displayOrders') as HTMLDivElement;
+//   courseList.innerHTML = '';
+//   for (let booking of bookings) {
+//     const div = createElement('div') as HTMLDivElement;
+//     const heading = createElement('h5') as HTMLHeadElement;
+//     const p = createElement('p') as HTMLParagraphElement;
+//     div.classList.add('orderDisplay');
+//     heading.classList.add('booked-title');
+//     heading.textContent = `Bokade kurser`;
+//     p.classList.add('booking-text');
+//     p.textContent = `${booking.courseId}`;
+//     div.append(heading);
+//     div.append(p);
+//     courseList.appendChild(div);
+//   }
+// };
+// const displayBookedCourse = (bookings: Array<IBookings>) => {
+//   bookedCourse(courseId);
+//   bookings.forEach((bookings) => getBookedCourse);
+//   console.log(bookings);
+// };
 const handlercheckout = async (e) => {
     e.preventDefault();
     if (formCheckout === null)
         return;
     const data = new FormData(formCheckout);
     const student = await verifyStudent(data.get('email'));
-    console.log(student[0]);
     addToBooked(student[0], courseId);
-    bookedCourse(courseId);
+    //   displayBookedCourse(bookings);
 };
 document.addEventListener('DOMContentLoaded', initApp);
 formCheckout?.addEventListener('submit', handlercheckout);

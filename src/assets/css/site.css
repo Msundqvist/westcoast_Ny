@@ -221,6 +221,12 @@ a {
 .orderDisplay {
   display: block;
 }
+.booking-text p {
+  font-size: 1.1rem;
+}
+.booked-title h5 {
+  font-size: 1.25rem;
+}
 /* Media Queries */
 /* min-width: 768px */
 @media (min-width: 768px) {
