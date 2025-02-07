@@ -17,9 +17,16 @@ const getCourse = async () => {
     const httpClient = new HttpClient('http://localhost:3000/courses/' + courseId);
     return await httpClient.Get();
 };
-const verifyStudent = async (email) => {
-    const httpClient = new HttpClient('http://localhost:3000/student?email=' + email);
-    return await httpClient.Get();
+const verifyStudent = async (email, studentName) => {
+    const httpClient = new HttpClient('http://localhost:3000/student?email=' +
+        email +
+        '&studentName=' +
+        studentName);
+    console.log('fått med båda');
+    const student = await httpClient.Get();
+    console.log('fått  med student', student);
+    return student;
+    //   return await httpClient.Get();
     //   const url = 'http://localhost:3000/student?email=' + email;
     //   const response = await fetch(url);
     //   if (response.ok) {
@@ -29,6 +36,7 @@ const verifyStudent = async (email) => {
 const addToBooked = async (student, courseId) => {
     const booking = {
         studentEmail: student.email,
+        studentName: student.studentName,
         courseId: courseId,
     };
     //   try {
@@ -45,7 +53,10 @@ const addToBooked = async (student, courseId) => {
         body: JSON.stringify(booking),
     });
     if (response.ok) {
-        console.log('det funkade');
+        return booking;
+    }
+    else {
+        throw new Error('du har skrivit fel användaruppgifter');
     }
 };
 const bookedCourse = async (courseId) => {
@@ -83,9 +94,11 @@ const handlercheckout = async (e) => {
     if (formCheckout === null)
         return;
     const data = new FormData(formCheckout);
-    const student = await verifyStudent(data.get('email'));
+    const student = await verifyStudent(data.get('email'), data.get('studentName'));
+    console.log(student);
     addToBooked(student[0], courseId);
     //   displayBookedCourse(bookings);
+    bookedCourse(courseId);
 };
 document.addEventListener('DOMContentLoaded', initApp);
 formCheckout?.addEventListener('submit', handlercheckout);

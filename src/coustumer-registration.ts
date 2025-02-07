@@ -27,11 +27,19 @@ const getCourse = async () => {
   return await httpClient.Get();
 };
 
-const verifyStudent = async (email: string) => {
+const verifyStudent = async (email: string, studentName: string) => {
   const httpClient = new HttpClient(
-    'http://localhost:3000/student?email=' + email
+    'http://localhost:3000/student?email=' +
+      email +
+      '&studentName=' +
+      studentName
   );
-  return await httpClient.Get();
+  console.log('fått med båda');
+  const student = await httpClient.Get();
+  console.log('fått  med student', student);
+  return student;
+  //   return await httpClient.Get();
+
   //   const url = 'http://localhost:3000/student?email=' + email;
   //   const response = await fetch(url);
   //   if (response.ok) {
@@ -42,6 +50,7 @@ const verifyStudent = async (email: string) => {
 const addToBooked = async (student: IStudent, courseId: number) => {
   const booking = {
     studentEmail: student.email,
+    studentName: student.studentName,
     courseId: courseId,
   };
   //   try {
@@ -60,7 +69,9 @@ const addToBooked = async (student: IStudent, courseId: number) => {
     body: JSON.stringify(booking),
   });
   if (response.ok) {
-    console.log('det funkade');
+    return booking;
+  } else {
+    throw new Error('du har skrivit fel användaruppgifter');
   }
 };
 const bookedCourse = async (courseId: number) => {
@@ -98,13 +109,19 @@ const bookedCourse = async (courseId: number) => {
 //   bookings.forEach((bookings) => getBookedCourse);
 //   console.log(bookings);
 // };
+
 const handlercheckout = async (e: SubmitEvent) => {
   e.preventDefault();
   if (formCheckout === null) return;
   const data = new FormData(formCheckout);
-  const student = await verifyStudent(data.get('email') as string);
+  const student = await verifyStudent(
+    data.get('email') as string,
+    data.get('studentName') as string
+  );
+  console.log(student);
   addToBooked(student[0], courseId);
   //   displayBookedCourse(bookings);
+  bookedCourse(courseId);
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
