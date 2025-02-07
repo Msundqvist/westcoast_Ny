@@ -87,11 +87,6 @@
       "id": "01b3",
       "studentName": "",
       "email": "bertil@gmail.com"
-    },
-    {
-      "id": "a401",
-      "studentName": null,
-      "email": "epple@gmail.com"
     }
   ],
   "bookings": [
@@ -228,6 +223,31 @@
     {
       "id": "150e",
       "studentEmail": "michael@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "04f2",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "1302",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "a80a",
+      "studentEmail": "michael@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "4357",
+      "studentEmail": "matilda@gmail.com",
+      "courseId": 2
+    },
+    {
+      "id": "1e5e",
+      "studentEmail": "bertil@gmail.com",
       "courseId": 2
     }
   ]

@@ -1,3 +1,4 @@
+import { IBookings } from './models/IBookings';
 import { ICourses } from './models/ICourses';
 import { IStudent } from './models/IStudent';
 import { createElement } from './utilities/dom.js';
@@ -54,10 +55,27 @@ const bookedCourse = async (courseId: number) => {
     console.log(course);
   }
 };
-const listcourses = () => {
-  const courseList = document.querySelector('#displayOrders');
-};
 
+const getBookedCourse = (bookings: Array<IBookings>) => {
+  const courseList = document.querySelector('#displayOrders') as HTMLDivElement;
+  courseList.innerHTML = '';
+
+  for (let booking of bookings) {
+    const div = createElement('div') as HTMLDivElement;
+    const heading = createElement('h5') as HTMLHeadElement;
+    const p = createElement('p') as HTMLParagraphElement;
+
+    div.classList.add('orderDisplay');
+    heading.classList.add('book-title');
+    heading.textContent = `Bokade kurser`;
+    p.classList.add('booking-text');
+    p.textContent = `${booking}`;
+
+    div.append(heading);
+    div.append(p);
+    courseList.appendChild(div);
+  }
+};
 const handlercheckout = async (e: SubmitEvent) => {
   e.preventDefault();
   if (formCheckout === null) return;

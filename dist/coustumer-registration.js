@@ -1,3 +1,4 @@
+import { createElement } from './utilities/dom.js';
 const formCheckout = document.querySelector('#form');
 let courseId = 0;
 let courses;
@@ -46,8 +47,22 @@ const bookedCourse = async (courseId) => {
         console.log(course);
     }
 };
-const listcourses = () => {
+const getBookedCourse = (bookings) => {
     const courseList = document.querySelector('#displayOrders');
+    courseList.innerHTML = '';
+    for (let booking of bookings) {
+        const div = createElement('div');
+        const heading = createElement('h5');
+        const p = createElement('p');
+        div.classList.add('orderDisplay');
+        heading.classList.add('book-title');
+        heading.textContent = `Bokade kurser`;
+        p.classList.add('booking-text');
+        p.textContent = `${booking}`;
+        div.append(heading);
+        div.append(p);
+        courseList.appendChild(div);
+    }
 };
 const handlercheckout = async (e) => {
     e.preventDefault();
@@ -61,4 +76,3 @@ const handlercheckout = async (e) => {
 };
 document.addEventListener('DOMContentLoaded', initApp);
 formCheckout?.addEventListener('submit', handlercheckout);
-export {};

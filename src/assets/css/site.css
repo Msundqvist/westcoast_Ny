@@ -218,7 +218,7 @@ a {
   border: solid 1px #ef6c00;
 }
 
-#displayOrders {
+.orderDisplay {
   display: block;
 }
 /* Media Queries */
