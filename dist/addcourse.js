@@ -1,6 +1,7 @@
 import { createElement } from './utilities/dom.js';
 const addcourseForm = document.querySelector('#addCourseForm');
 const initApp = () => { };
+let courseId = 0;
 const addNewcourse = async (course) => {
     const addCourse = {
         courseName: course.courseName,
@@ -28,29 +29,13 @@ const addNewcourse = async (course) => {
         throw new Error('du har skrivit fel användaruppgifter');
     }
 };
-const formControl = async () => {
-    const filter = document.querySelector('#item-input').value;
-    if (filter.trim().length === 0) {
-        displayErrorMessage();
+const addedCourse = async (courseId) => {
+    const url = 'http://localhost:3000/courses/' + courseId;
+    const response = await fetch(url);
+    if (response.ok) {
+        const course = await response.json();
+        return course;
     }
-};
-const handleAddCourse = async (e) => {
-    e.preventDefault();
-    const data = new FormData(addcourseForm);
-    const formdata = Object.fromEntries(data);
-    const course = {
-        courseName: formdata.courseName.toString(),
-        courseNumber: +formdata.courseNumber.toString(),
-        id: +formdata.id.toString(),
-        classRoom: formdata.classRoom.toString(),
-        distans: formdata.distans.toString(),
-        popular: formdata.popular.toString(),
-        startDate: formdata.startDate.toString(),
-        duration: +formdata.duration.toString(),
-        imageUrl: data.get('imageUrl'),
-    };
-    addNewcourse(course);
-    await formControl();
 };
 const displayErrorMessage = () => {
     const errormsg = document.querySelector('errorMsg');
@@ -59,6 +44,39 @@ const displayErrorMessage = () => {
     div.classList.add('errorMsg');
     div.textContent = `Du har inte fyllt i alla fält!!!`;
     errormsg.appendChild(div);
+};
+const formControl = async () => {
+    const filter = document.querySelector('#item-input').value;
+    if (filter.trim().length === 0) {
+        displayErrorMessage();
+    }
+};
+const getAddedcourse = () => {
+    const url = location.search.split('=')[1];
+    location.href = `./courses.html?id=${url}`;
+    console.log(getAddedcourse);
+};
+const handleAddCourse = async (e) => {
+    e.preventDefault();
+    if (addcourseForm === null)
+        return;
+    const data = new FormData(addcourseForm);
+    const addcourse = {
+        courseName: data.get('courseName'),
+        courseNumber: parseInt(data.get('courseNumber').toString()),
+        id: parseInt(data.get('id').toString()),
+        classRoom: Boolean(data.get('classRoom').toString()),
+        distans: Boolean(data.get('distans').toString()),
+        popular: Boolean(data.get('distans').toString()),
+        startDate: data.get('startdate'),
+        duration: parseInt(data.get('duration').toString()),
+        imageUrl: data.get('imageUrl'),
+    };
+    formControl();
+    console.log('här');
+    addNewcourse(addcourse);
+    addedCourse(courseId);
+    // getAddedcourse();
 };
 document.addEventListener('DOMContentLoaded', initApp);
 addcourseForm.addEventListener('submit', handleAddCourse);
