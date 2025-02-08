@@ -1,7 +1,5 @@
-import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
 import { createElement } from './utilities/dom.js';
-import { HttpClient } from './utilities/httpClient.js';
 const addcourseForm = document.querySelector(
   '#addCourseForm'
 ) as HTMLFormElement;

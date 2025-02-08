@@ -7,16 +7,16 @@ import { HttpClient } from './utilities/httpClient.js';
 const formCheckout = document.querySelector<HTMLFormElement>('#form');
 
 let courseId = 0;
+let course: ICourses;
 
 const initApp = () => {
-  const courseId = location.search.split('=')[0];
-  console.log(courseId);
-
+  const courseNumber = location.search.split('=')[0];
+  console.log(courseNumber);
   getCourse();
 };
 const getCourse = async () => {
   const httpClient = new HttpClient(
-    'http://localhost:3000/courses/' + courseId
+    'http://localhost:3000/courses?id=' + courseId
   );
   return await httpClient.Get();
 };
