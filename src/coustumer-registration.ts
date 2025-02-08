@@ -9,6 +9,9 @@ const formCheckout = document.querySelector<HTMLFormElement>('#form');
 let courseId = 0;
 
 const initApp = () => {
+  const courseId = location.search.split('=')[0];
+  console.log(courseId);
+
   getCourse();
 };
 const getCourse = async () => {

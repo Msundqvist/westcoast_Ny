@@ -3,6 +3,8 @@ import { HttpClient } from './utilities/httpClient.js';
 const formCheckout = document.querySelector('#form');
 let courseId = 0;
 const initApp = () => {
+    const courseId = location.search.split('=')[0];
+    console.log(courseId);
     getCourse();
 };
 const getCourse = async () => {

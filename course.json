@@ -159,18 +159,6 @@
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 2
-    },
-    {
-      "id": "d3ea",
-      "studentEmail": "matilda@gmail.com",
-      "studentName": "matilda",
-      "courseId": 0
-    },
-    {
-      "id": "1ff0",
-      "studentEmail": "matilda@gmail.com",
-      "studentName": "matilda",
-      "courseId": 0
     }
   ]
 }
