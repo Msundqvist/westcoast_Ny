@@ -65,6 +65,18 @@
       "startDate": "2025-03-15",
       "popular": false,
       "id": "6"
+    },
+    {
+      "id": null,
+      "courseName": "boxning",
+      "courseNumber": 10,
+      "duration": 14,
+      "price": 100,
+      "startDate": "2027-05-23",
+      "classRoom": false,
+      "popular": true,
+      "distans": true,
+      "imageUrl": "paint1.jpg"
     }
   ],
   "student": [
