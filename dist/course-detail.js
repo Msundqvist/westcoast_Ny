@@ -21,6 +21,7 @@ const displayCourse = (course) => {
 const getlocationcourse = () => {
     const url = location.search.split('=')[1];
     location.href = `./coustumer-registration.html?id=${url}`;
+    console.log(url);
 };
 const addToCart = () => {
     getlocationcourse();
