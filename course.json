@@ -9,7 +9,7 @@
       "imageUrl": "beer.jpg",
       "startDate": "2025-04-10",
       "popular": true,
-      "id": "1"
+      "id": 1
     },
     {
       "courseName": "obedience class",
@@ -20,7 +20,7 @@
       "imageUrl": "miniature-schnauzer.jpg",
       "startDate": "2025-05-10",
       "popular": false,
-      "id": "2"
+      "id": 2
     },
     {
       "courseName": "Bird watching",
@@ -31,7 +31,7 @@
       "imageUrl": "naturePhotographers.jpg",
       "startDate": "2025-09-11",
       "popular": true,
-      "id": "3"
+      "id": 3
     },
     {
       "courseName": "Painting class",
@@ -42,7 +42,7 @@
       "imageUrl": "painting.jpg",
       "startDate": "2025-07-15",
       "popular": true,
-      "id": "4"
+      "id": 4
     },
     {
       "courseName": "Cooking class",
@@ -53,7 +53,7 @@
       "imageUrl": "food.jpg",
       "startDate": "2025-07-15",
       "popular": false,
-      "id": "5"
+      "id": 5
     },
     {
       "courseName": "Survive in the wilderness",
@@ -64,7 +64,7 @@
       "imageUrl": "wildernessgirl.jpg",
       "startDate": "2025-03-15",
       "popular": false,
-      "id": "6"
+      "id": 6
     }
   ],
   "newcourse": [
@@ -163,6 +163,18 @@
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 3
+    },
+    {
+      "id": "822d",
+      "studentEmail": "matilda@gmail.com",
+      "studentName": "matilda",
+      "courseId": 0
+    },
+    {
+      "id": "815f",
+      "studentEmail": "matilda@gmail.com",
+      "studentName": "matilda",
+      "courseId": 0
     }
   ]
 }
