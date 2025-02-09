@@ -233,6 +233,11 @@ a {
 .showbookings {
   display: block;
 }
+.adderakurs a {
+  display: flex;
+  font-size: 1.2rem;
+  color: green !important;
+}
 /* Media Queries */
 /* min-width: 768px */
 @media (min-width: 768px) {
