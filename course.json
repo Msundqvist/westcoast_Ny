@@ -9,7 +9,7 @@
       "imageUrl": "beer.jpg",
       "startDate": "2025-04-10",
       "popular": true,
-      "id": 1
+      "id": "1"
     },
     {
       "courseName": "obedience class",
@@ -20,7 +20,7 @@
       "imageUrl": "miniature-schnauzer.jpg",
       "startDate": "2025-05-10",
       "popular": false,
-      "id": 2
+      "id": "2"
     },
     {
       "courseName": "Bird watching",
@@ -31,7 +31,7 @@
       "imageUrl": "naturePhotographers.jpg",
       "startDate": "2025-09-11",
       "popular": true,
-      "id": 3
+      "id": "3"
     },
     {
       "courseName": "Painting class",
@@ -42,7 +42,7 @@
       "imageUrl": "painting.jpg",
       "startDate": "2025-07-15",
       "popular": true,
-      "id": 4
+      "id": "4"
     },
     {
       "courseName": "Cooking class",
@@ -53,7 +53,7 @@
       "imageUrl": "food.jpg",
       "startDate": "2025-07-15",
       "popular": false,
-      "id": 5
+      "id": "5"
     },
     {
       "courseName": "Survive in the wilderness",
@@ -64,70 +64,47 @@
       "imageUrl": "wildernessgirl.jpg",
       "startDate": "2025-03-15",
       "popular": false,
-      "id": 6
-    }
-  ],
-  "newcourse": [
-    {
-      "id": "5682",
-      "courseName": "fa",
-      "courseNumber": 50,
-      "duration": 80,
-      "price": 90
+      "id": "6"
     }
   ],
   "student": [
     {
       "studentName": "matilda",
       "email": "matilda@gmail.com",
-      "id": "93bf"
+      "billingAdress": "gatan 5",
+      "phoneNumber": "1264523",
+      "id": "34d8"
     },
     {
       "studentName": "kalle",
       "email": "kalle@gmail.com",
-      "id": "eef5"
+      "billingAdress": "gatan 4",
+      "phoneNumber": "1264513",
+      "id": "2cab"
     },
     {
       "studentName": "Michael",
       "email": "michael@gmail.com",
-      "id": "1ff6"
+      "billingAdress": "gatan 8",
+      "phoneNumber": "123456789",
+      "id": "f696"
     },
     {
-      "id": "01b3",
-      "studentName": "",
-      "email": "bertil@gmail.com"
+      "id": "7daa",
+      "studentName": "august",
+      "email": "august@live.se",
+      "billingAdress": "storstaden 6 ",
+      "phoneNumber": "097865481"
     },
     {
-      "id": "af95",
-      "studentName": "kanon",
-      "email": "kanon@gmail.com"
-    },
-    {
-      "id": "4580",
-      "studentName": "adam",
-      "email": "afw@gmail.com"
-    },
-    {
-      "id": "c40d",
-      "studentName": "adam",
-      "email": "afw@gmail.com"
-    },
-    {
-      "id": "5d09",
-      "studentName": "matilda",
-      "email": "matilda@gmail.com"
-    },
-    {
-      "id": "b182",
-      "studentName": "bert",
-      "email": "bert@gmail.com"
+      "id": "fc96",
+      "studentName": "august",
+      "email": "august@live.se",
+      "billingAdress": "gatan",
+      "phoneNumber": "09768523"
     }
   ],
   "bookings": [
-    {
-      "id": "aa60",
-      "courseId": 6
-    },
     {
       "id": "443f",
       "studentEmail": "matilda@gmail.com",
@@ -175,6 +152,24 @@
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 0
+    },
+    {
+      "id": "7ffc",
+      "studentEmail": "matilda@gmail.com",
+      "studentName": "matilda",
+      "courseId": 3
+    },
+    {
+      "id": "ab77",
+      "studentEmail": "matilda@gmail.com",
+      "studentName": "matilda",
+      "courseId": 3
+    },
+    {
+      "id": "8bdb",
+      "studentEmail": "emil@gmail.com",
+      "studentName": "emil",
+      "courseId": 2
     }
   ]
 }

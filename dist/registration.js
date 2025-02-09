@@ -8,6 +8,8 @@ const register = async (e) => {
     const user = {
         studentName: data.get('studentName'),
         email: data.get('email'),
+        billingAdress: data.get('billingAdress'),
+        phoneNumber: data.get('phoneNumber'),
     };
     try {
         await fetch('http://localhost:3000/student', {

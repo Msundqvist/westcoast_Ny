@@ -11,7 +11,7 @@
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
-    <script type="module" src="../../dist/addcourse.js" defer></script>
+    <script type="module" src="../admin.js" defer></script>
     <title>Admin</title>
 </head>
 <body>
@@ -49,8 +49,26 @@
       </nav>
     </header>
     <main>
-      <h1 class="page-title">addera kurs</h1>
-      <form id="addCourseForm">
+      <h1>tillgängliga kurser</h1>
+      <div class ="list-courses">
+        <!-- <button class="btncourse" id="courselist">klicka</button>
+        <ul>
+          <li id="brewing"><a href="#"> Brewing class</a>
+          </li>
+          <li id="Obediance"><a href="#"> obedience class</a>
+          </li>
+          <li id="birdwatching"><a href="#"> Bird watching</a>
+          </li>
+          <li id="painting"><a href="#"> Painting class</a>
+          </li>
+          <li id="cooking"><a href="#"> Cooking class</a>
+          </li>
+          <li id="survive"><a href="#"> Survive in the wilderness</a>
+          </li>
+        </ul> -->
+      </div>
+      <h2 class="page-title">addera kurs</h2>
+      <!-- <form id="addCourseForm">
         <div class="form-control">
           <label for="coursName">kursnamn</label>
           <input type="text" name="courseName" id="item-input" />
@@ -67,7 +85,7 @@
             <label for="price">Pris</label>
             <input type="number" name="price" id="item-input" />
           </div>
-          <!-- <div class="form-control">
+          <!<div class="form-control">
             <label for="classRoom">Klassrum</label>
             <input type="text" name="classRoom" id="item-input" placeholder="ja eller nej" />
           </div>
@@ -87,10 +105,11 @@
             <label for="startDate">Kursstart</label>
             <input type="text" name="startDate" id="item-input" />
           </div> -->
-        <button id="buttonSubmit" class="btn" type="submit">lägg till klass</button>
-      </form>
+        <!-- <button id="buttonSubmit" class="btn" type="submit">lägg till klass</button> -->
+      <!-- </form> --> 
       <div class="errorMsg"></div>
-      <div id="listBookings"></div>
+      <div class="showbookings">
+      </div>
     </main>
   </body>
 </html>

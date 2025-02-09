@@ -18,11 +18,15 @@ const getCourse = async () => {
     const httpClient = new HttpClient('http://localhost:3000/courses/' + courseId);
     return await httpClient.Get();
 };
-const verifyStudent = async (email, studentName) => {
+const verifyStudent = async (email, studentName, billingAdress, phoneNumber) => {
     const httpClient = new HttpClient('http://localhost:3000/student?email=' +
         email +
         '&studentName=' +
-        studentName);
+        studentName +
+        '&billingAdress=' +
+        billingAdress +
+        '&phoneNumber=' +
+        phoneNumber);
     console.log('fått med båda');
     const student = await httpClient.Get();
     console.log('fått  med student', student);
@@ -91,10 +95,10 @@ const getBookedCourse = (course) => {
 // };
 const handlercheckout = async (e) => {
     e.preventDefault();
-    if (formCheckout === null)
+    if (formCheckout === null || formCheckout.value === '')
         return;
     const data = new FormData(formCheckout);
-    const student = await verifyStudent(data.get('email'), data.get('studentName'));
+    const student = await verifyStudent(data.get('email'), data.get('studentName'), data.get('billingAdress'), data.get('phoneNumber'));
     console.log(student);
     addToBooked(student[0], courseId);
     const course = await bookedCourse(courseId);

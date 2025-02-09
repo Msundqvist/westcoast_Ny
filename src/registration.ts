@@ -16,6 +16,8 @@ const register = async (e: SubmitEvent) => {
   const user: IStudent = {
     studentName: data.get('studentName') as string,
     email: data.get('email') as string,
+    billingAdress: data.get('billingAdress') as string,
+    phoneNumber: data.get('phoneNumber') as string,
   };
 
   try {
