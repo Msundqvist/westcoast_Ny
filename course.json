@@ -65,17 +65,15 @@
       "startDate": "2025-03-15",
       "popular": false,
       "id": "6"
-    },
+    }
+  ],
+  "newcourse": [
     {
-      "id": null,
-      "courseName": "boxning",
-      "courseNumber": null,
-      "duration": null,
-      "classRoom": false,
-      "popular": false,
-      "distans": false,
-      "imageUrl": null,
-      "startDate": null
+      "id": "5682",
+      "courseName": "fa",
+      "courseNumber": 50,
+      "duration": 80,
+      "price": 90
     }
   ],
   "student": [
