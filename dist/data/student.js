@@ -12,7 +12,7 @@ export const student = [
         phoneNumber: '1264513',
     },
     {
-        studentName: 'Michael',
+        studentName: 'michael',
         email: 'michael@gmail.com',
         billingAdress: 'gatan 8',
         phoneNumber: '123456789',
