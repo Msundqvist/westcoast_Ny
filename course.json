@@ -125,7 +125,7 @@
       "id": "2cab"
     },
     {
-      "studentName": "Michael",
+      "studentName": "michael",
       "email": "michael@gmail.com",
       "billingAdress": "gatan 8",
       "phoneNumber": "123456789",
@@ -185,10 +185,6 @@
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 2
-    },
-    {
-      "id": "7fc6",
-      "studentName": 5
     },
     {
       "id": "dc35",
