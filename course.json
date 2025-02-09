@@ -67,16 +67,46 @@
       "id": "6"
     },
     {
-      "id": null,
+      "id": "db72",
       "courseName": "boxning",
       "courseNumber": 10,
-      "duration": 14,
-      "price": 100,
-      "startDate": "2027-05-23",
-      "classRoom": false,
-      "popular": true,
-      "distans": true,
-      "imageUrl": "paint1.jpg"
+      "duration": 22,
+      "price": 4811
+    },
+    {
+      "id": "71eb",
+      "courseName": "tapetserare",
+      "courseNumber": 60,
+      "duration": 62,
+      "price": 6599
+    },
+    {
+      "id": "a3cc",
+      "courseName": "boxning",
+      "courseNumber": 150,
+      "duration": 90,
+      "price": 959
+    },
+    {
+      "id": "ebb4",
+      "courseName": "boxning",
+      "courseNumber": 150,
+      "duration": 90,
+      "price": 959
+    },
+    {
+      "id": "e975",
+      "courseName": "pil",
+      "courseNumber": 78,
+      "duration": 90,
+      "price": 5699
+    },
+    {
+      "id": "ed25",
+      "courseName": "pil",
+      "courseNumber": 78,
+      "duration": 90,
+      "price": 5699
     }
   ],
   "student": [
@@ -114,6 +144,27 @@
       "email": "august@live.se",
       "billingAdress": "gatan",
       "phoneNumber": "09768523"
+    },
+    {
+      "id": "b394",
+      "studentName": "malin",
+      "email": "malin@malin.com",
+      "billingAdress": "ihdwp",
+      "phoneNumber": "8089551"
+    },
+    {
+      "id": "b106",
+      "studentName": "august",
+      "email": "bertil@gmail.com",
+      "billingAdress": "gatan 45",
+      "phoneNumber": "097826"
+    },
+    {
+      "id": "3d49",
+      "studentName": "adam",
+      "email": "epple@gmail.com",
+      "billingAdress": "gatan",
+      "phoneNumber": "84891"
     }
   ],
   "bookings": [
@@ -136,52 +187,86 @@
       "courseId": 2
     },
     {
-      "id": "0da1",
-      "studentEmail": "matilda@gmail.com",
-      "studentName": "matilda",
-      "courseId": 2
+      "id": "7fc6",
+      "studentName": 5
     },
     {
-      "id": "b220",
-      "studentEmail": "matilda@gmail.com",
-      "studentName": "matilda",
-      "courseId": 0
-    },
-    {
-      "id": "3272",
-      "studentEmail": "matilda@gmail.com",
-      "studentName": "matilda",
-      "courseId": 3
-    },
-    {
-      "id": "822d",
+      "id": "460c",
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 0
     },
     {
-      "id": "815f",
+      "id": "4e0f",
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 0
     },
     {
-      "id": "7ffc",
+      "id": "3d3f",
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
-      "courseId": 3
+      "courseId": 0
     },
     {
-      "id": "ab77",
+      "id": "cece",
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
-      "courseId": 3
+      "courseId": 0
     },
     {
-      "id": "8bdb",
-      "studentEmail": "emil@gmail.com",
-      "studentName": "emil",
-      "courseId": 2
+      "id": "d754",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "9861",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "6098",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "e8a9",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "1958",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "6787",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "82bf",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "c5aa",
+      "studentEmail": "epple@gmail.com",
+      "studentName": "adam",
+      "courseId": 0
+    },
+    {
+      "id": "dc35",
+      "studentEmail": "matilda@gmail.com",
+      "studentName": "matilda",
+      "courseId": 1
     }
   ]
 }

@@ -1,6 +1,7 @@
 import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
 import { generateHtmlCourse } from './utilities/dom.js';
+
 const addCoursebutton =
   document.querySelector<HTMLButtonElement>('#addToBooked');
 

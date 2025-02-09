@@ -8,5 +8,4 @@ export interface ICourses {
   distans: boolean;
   startDate: string;
   popular: boolean;
-  price: number;
 }

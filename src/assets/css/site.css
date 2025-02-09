@@ -230,9 +230,19 @@ a {
 .errorMsg {
   display: block;
 }
-.showbookings {
-  display: block;
+.list-courses {
+  display: flex;
+  justify-content: center;
 }
+.list-courses ul {
+  list-style-type: none;
+}
+
+.list-courses a {
+  color: #04b82b;
+  font-size: 1.1rem;
+}
+
 .adderakurs a {
   display: flex;
   font-size: 1.2rem;

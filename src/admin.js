@@ -1,13 +1,13 @@
-import { ICourses } from './models/ICourses';
+
 
 const formAddCourse = document.querySelector(
   '#addCourseForm'
-) as HTMLFormElement;
+)
 
 const initApp = () => {
   getCourseInfo(2);
 };
-const addCourse = async (courses: ICourses) => {
+const addCourse = async (courses) => {
   const course = {
     courseName: courses.courseName,
     courseNumber: courses.courseNumber,
@@ -29,17 +29,17 @@ const addCourse = async (courses: ICourses) => {
     throw new Error('du har anget fel information');
   }
 };
-// const loadCourses = async (courseNumber) => {
-//   const url = 'http://localhost:3000/courses?courseNumber=' + courseNumber;
-//   const response = await fetch(url)
+const loadCourses = async (courseNumber) => {
+  const url = 'http://localhost:3000/courses?courseNumber=' + courseNumber;
+  const response = await fetch(url)
 
-//   if (response.ok) {
-//     const courses = await response.json();
-//     displayCou(courses)
-//   }
-// }
+  if (response.ok) {
+    const courses = await response.json();
+    displayCou(courses)
+  }
+}
 
-const getCourseInfo = async (courseId: number) => {
+const getCourseInfo = async (courseId) => {
   const url = 'http://localhost:3000/bookings?courseId=' + courseId;
   const response = await fetch(url);
 
@@ -49,24 +49,19 @@ const getCourseInfo = async (courseId: number) => {
   }
 };
 
-const displayCourseInfo = async (booking: string) => {
+const displayCourseInfo = async (booking) => {
   console.log(booking);
 };
-const handleAddCourse = async (e: SubmitEvent) => {
+const handleAddCourse = async (e) => {
   e.preventDefault();
   if (formAddCourse === null || formAddCourse.value === '') return;
   const data = new FormData(formAddCourse);
-  const course: ICourses = {
-    courseName: data.get('courseName') as string,
-    courseNumber: parseInt(data.get('courseNumber') as string),
-    duration: parseInt(data.get('duration') as string),
-    price: parseInt(data.get('price') as string),
-    id: parseInt(data.get('id') as string),
-    startDate: data.get('startDate') as string,
-    classRoom: Boolean(data.get('classrom') as string),
-    popular: Boolean(data.get('popular') as string),
-    distans: Boolean(data.get('distans') as string),
-    imageUrl: data.get('imageUrl') as string,
+  const course = {
+    courseName: data.get('courseName').toString(),
+    courseNumber: parseInt(data.get('courseNumber').toString()),
+    duration: parseInt(data.get('duration').toString()),
+    price: parseInt(data.get('price').toString()),
+
   };
   try {
     await fetch('http://localhost:3000/courses', {
@@ -79,6 +74,8 @@ const handleAddCourse = async (e: SubmitEvent) => {
   } catch (error) {
     console.log('error');
   }
+  addCourse(course);
+  location.href = `./courses.html`
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
