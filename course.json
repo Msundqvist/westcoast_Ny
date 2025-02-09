@@ -209,6 +209,12 @@
       "studentEmail": "matilda@gmail.com",
       "studentName": "matilda",
       "courseId": 6
+    },
+    {
+      "id": "8aca",
+      "studentEmail": "malin@malin.com",
+      "studentName": "malin",
+      "courseId": 5
     }
   ]
 }

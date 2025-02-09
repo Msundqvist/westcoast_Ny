@@ -68,3 +68,21 @@ export const generateHtmlCourse = (course: ICourses) => {
     `;
   return div;
 };
+export const getBookedCourse = (course: ICourses) => {
+  const courseList = document.querySelector('#displayOrders') as HTMLDivElement;
+  courseList.innerHTML = '';
+
+  const div = createElement('div') as HTMLDivElement;
+  const heading = createElement('h5') as HTMLHeadElement;
+  const p = createElement('p') as HTMLParagraphElement;
+
+  div.classList.add('orderDisplay');
+  heading.classList.add('booked-title');
+  heading.textContent = `Bokade kurser`;
+  p.classList.add('booking-text');
+  p.textContent = `${course.courseName}`;
+
+  div.appendChild(heading);
+  div.appendChild(p);
+  courseList.appendChild(div);
+};
