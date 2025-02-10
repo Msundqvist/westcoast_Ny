@@ -230,24 +230,7 @@ a {
 .errorMsg {
   display: block;
 }
-.list-courses {
-  display: flex;
-  justify-content: center;
-}
-.list-courses ul {
-  list-style-type: none;
-}
 
-.list-courses a {
-  color: #04b82b;
-  font-size: 1.1rem;
-}
-
-.adderakurs a {
-  display: flex;
-  font-size: 1.2rem;
-  color: green !important;
-}
 /* Media Queries */
 /* min-width: 768px */
 @media (min-width: 768px) {

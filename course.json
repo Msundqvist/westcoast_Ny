@@ -65,48 +65,6 @@
       "startDate": "2025-03-15",
       "popular": false,
       "id": "6"
-    },
-    {
-      "id": "db72",
-      "courseName": "boxning",
-      "courseNumber": 10,
-      "duration": 22,
-      "price": 4811
-    },
-    {
-      "id": "71eb",
-      "courseName": "tapetserare",
-      "courseNumber": 60,
-      "duration": 62,
-      "price": 6599
-    },
-    {
-      "id": "a3cc",
-      "courseName": "boxning",
-      "courseNumber": 150,
-      "duration": 90,
-      "price": 959
-    },
-    {
-      "id": "ebb4",
-      "courseName": "boxning",
-      "courseNumber": 150,
-      "duration": 90,
-      "price": 959
-    },
-    {
-      "id": "e975",
-      "courseName": "pil",
-      "courseNumber": 78,
-      "duration": 90,
-      "price": 5699
-    },
-    {
-      "id": "ed25",
-      "courseName": "pil",
-      "courseNumber": 78,
-      "duration": 90,
-      "price": 5699
     }
   ],
   "student": [

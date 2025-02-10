@@ -109,14 +109,11 @@ const listAllCourses = async (courses) => {
 const displayAllcourses = (courses) => {
   for (let course of courses) {
     const div = document.createElement('div')
-    const courseName = document.createElement('span')
-    const courseNumber = document.createElement('span')
+
+    const courseName = document.createElement('a')
 
     courseName.textContent = course.courseName
-    courseNumber.textContent = course.courseNumber
-
     div.appendChild(courseName)
-    div.appendChild(courseNumber)
 
     listCourses.appendChild(div)
 
