@@ -4,11 +4,12 @@ const formAddCourse = document.querySelector(
   '#addCourseForm'
 )
 const courseList = document.querySelector('#showbookings')
+const listCourses = document.querySelector('#listAllcourses')
 
 const initApp = () => {
   // getCourseInfo(2);
   // displayCourseInfo(bookings);
-  getAllCourses();
+  listAllCourses();
 };
 // const addCourse = async (courses) => {
 //   const course = {
@@ -95,17 +96,32 @@ const initApp = () => {
 //   addCourse(course);
 //   location.href = `./courses.html`
 // };
-const getAllCourses = async (courses) => {
+const listAllCourses = async (courses) => {
   const url = 'http://localhost:3000/courses?' + courses
   const response = await fetch(url)
   if (response.ok) {
     const course = await response.json();
-    console.log(course)
+    displayAllcourses(course)
 
   }
 
 }
-const displayAllcourses = () => { }
+const displayAllcourses = (courses) => {
+  for (let course of courses) {
+    const div = document.createElement('div')
+    const courseName = document.createElement('span')
+    const courseNumber = document.createElement('span')
+
+    courseName.textContent = course.courseName
+    courseNumber.textContent = course.courseNumber
+
+    div.appendChild(courseName)
+    div.appendChild(courseNumber)
+
+    listCourses.appendChild(div)
+
+  }
+}
 
 document.addEventListener('DOMContentLoaded', initApp);
 // formAddCourse?.addEventListener('submit', handleAddCourse);
