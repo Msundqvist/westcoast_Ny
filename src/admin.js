@@ -96,6 +96,10 @@ const initApp = () => {
 //   addCourse(course);
 //   location.href = `./courses.html`
 // };
+const handleCourseList = () => {
+  console.log('klickat')
+}
+
 const listAllCourses = async (courses) => {
   const url = 'http://localhost:3000/courses?' + courses
   const response = await fetch(url)
@@ -108,6 +112,7 @@ const listAllCourses = async (courses) => {
 
 }
 const displayAllcourses = (courses) => {
+
   for (let course of courses) {
     const div = document.createElement('div')
     const courseName = document.createElement('Span')
@@ -115,9 +120,8 @@ const displayAllcourses = (courses) => {
 
 
     courseName.textContent = course.courseName
-    button.classList.add = ('buttonCourses')
-    button.id = (course.courseNumber)
-    button.type = ('click')
+    button.id = course.courseNumber
+    button.addEventListener = ('click')
     button.textContent = course.courseName
 
     div.appendChild(courseName)
@@ -125,9 +129,9 @@ const displayAllcourses = (courses) => {
 
 
     listCourses.appendChild(div)
-
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', initApp);
 // formAddCourse?.addEventListener('submit', handleAddCourse);
