@@ -105,15 +105,24 @@ const listAllCourses = async (courses) => {
 
   }
 
+
 }
 const displayAllcourses = (courses) => {
   for (let course of courses) {
     const div = document.createElement('div')
+    const courseName = document.createElement('Span')
+    const button = document.createElement('button')
 
-    const courseName = document.createElement('a')
 
     courseName.textContent = course.courseName
+    button.classList.add = ('buttonCourses')
+    button.id = (course.courseNumber)
+    button.type = ('click')
+    button.textContent = course.courseName
+
     div.appendChild(courseName)
+    div.appendChild(button)
+
 
     listCourses.appendChild(div)
 
