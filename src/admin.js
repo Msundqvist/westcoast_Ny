@@ -43,16 +43,16 @@ const initApp = () => {
 //   }
 // }
 
-// const getCourseInfo = async (courseId) => {
-//   const url = 'http://localhost:3000/bookings?courseId=' + courseId;
-//   const response = await fetch(url);
+const getCourseInfo = async (courseId) => {
+  const url = 'http://localhost:3000/bookings?courseId=' + courseId;
+  const response = await fetch(url);
 
-//   if (response.ok) {
-//     const bookings = await response.json();
-//     console.log(bookings)
-//   }
+  if (response.ok) {
+    const bookings = await response.json();
+    console.log(bookings)
+  }
 
-// };
+};
 
 // const displayCourseInfo = async (bookings) => {
 //   for (let booking of bookings) {
@@ -96,9 +96,10 @@ const initApp = () => {
 //   addCourse(course);
 //   location.href = `./courses.html`
 // };
-const handleCourseList = async () => {
-  console.log('klickat')
 
+const handleCourseList = () => {
+  const url = location.search.split('=')[1]
+  getCourseInfo(url)
 
 }
 
@@ -117,22 +118,17 @@ const displayAllcourses = (courses) => {
   for (let course of courses) {
     const div = document.createElement('div')
     const courseName = document.createElement('Span')
-    const button = document.createElement('button')
-    button.setAttribute('type', "click")
-    button.setAttribute('id', course.courseNumber)
-    button.textContent = course.courseName
+    const link = document.createElement('a')
 
-
-    courseName.textContent = course.courseName
-    courseName.appendChild(button)
-
+    courseName.appendChild(link)
+    link.href = `./admin.html?courseNumber=${course.courseNumber}`
+    link.textContent = course.courseName
 
     div.appendChild(courseName)
 
     listCourses.appendChild(div)
-    button.addEventListener = ('click', function (e) {
-    })
   }
+  handleCourseList()
 }
 
 

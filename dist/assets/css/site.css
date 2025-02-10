@@ -9,11 +9,11 @@
 
 body {
   height: 100vh;
-  background: #1d2b4b;
+  background: #020b20;
   background: linear-gradient(
     180deg,
     rgba(15, 23, 42, 1) 0%,
-    rgb(128, 123, 234) 100%
+    rgb(104, 100, 190) 100%
   );
   color: var(--primary-color);
   font-family: 'Poppins', sans-serif;
@@ -171,7 +171,7 @@ a {
   display: inline-block;
   font-size: 0.9rem;
   color: #fff;
-  background: #7b1fa2;
+  background: #b157d8;
   line-height: 1.2;
   white-space: nowrap;
   text-decoration: none;
@@ -229,6 +229,10 @@ a {
 }
 .errorMsg {
   display: block;
+}
+#listAllcourses {
+  display: flex;
+  justify-content: center;
 }
 
 /* Media Queries */
