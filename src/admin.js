@@ -3,6 +3,7 @@
 const formAddCourse = document.querySelector(
   '#addCourseForm'
 )
+const courseList = document.querySelector('#showbookings')
 
 const initApp = () => {
   getCourseInfo(2);
@@ -49,8 +50,20 @@ const getCourseInfo = async (courseId) => {
   }
 };
 
-const displayCourseInfo = async (booking) => {
-  console.log(booking);
+const displayCourseInfo = (booking) => {
+  for (let booking of bookings) {
+    const div = createElement('div')
+    const studentName = createElement('span')
+    const courseName = createElement('span')
+
+    studentName.textContent = booking.studentName
+
+
+    div.appendChild(studentName)
+    courseList.appendChild(div)
+
+  }
+
 };
 const handleAddCourse = async (e) => {
   e.preventDefault();
