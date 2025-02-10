@@ -6,90 +6,106 @@ const formAddCourse = document.querySelector(
 const courseList = document.querySelector('#showbookings')
 
 const initApp = () => {
-  getCourseInfo(2);
+  // getCourseInfo(2);
+  // displayCourseInfo(bookings);
+  getAllCourses();
 };
-const addCourse = async (courses) => {
-  const course = {
-    courseName: courses.courseName,
-    courseNumber: courses.courseNumber,
-    duration: courses.duration,
-    price: courses.price,
-  };
-  const url = 'http://localhost:3000/courses';
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(course),
-  });
-  if (response.ok) {
-    console.log(response);
-    return courses;
-  } else {
-    throw new Error('du har anget fel information');
-  }
-};
-const loadCourses = async (courseNumber) => {
-  const url = 'http://localhost:3000/courses?courseNumber=' + courseNumber;
+// const addCourse = async (courses) => {
+//   const course = {
+//     courseName: courses.courseName,
+//     courseNumber: courses.courseNumber,
+//     duration: courses.duration,
+//     price: courses.price,
+//   };
+//   const url = 'http://localhost:3000/courses';
+//   const response = await fetch(url, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(course),
+//   });
+//   if (response.ok) {
+//     console.log(response);
+//     return courses;
+//   } else {
+//     throw new Error('du har anget fel information');
+//   }
+// };
+// const loadCourses = async (courseNumber) => {
+//   const url = 'http://localhost:3000/courses?courseNumber=' + courseNumber;
+//   const response = await fetch(url)
+
+//   if (response.ok) {
+//     const courses = await response.json();
+//     displayCou(courses)
+//   }
+// }
+
+// const getCourseInfo = async (courseId) => {
+//   const url = 'http://localhost:3000/bookings?courseId=' + courseId;
+//   const response = await fetch(url);
+
+//   if (response.ok) {
+//     const bookings = await response.json();
+//     console.log(bookings)
+//   }
+
+// };
+
+// const displayCourseInfo = async (bookings) => {
+//   for (let booking of bookings) {
+//     const div = document.createElement('div')
+//     const studentName = document.createElement('span')
+//     const courseName = document.createElement('span')
+
+//     studentName.textContent = booking.studentName
+//     courseName.textContent = booking.courseName
+
+
+//     div.appendChild(studentName)
+//     div.appendChild(courseName)
+//     courseList.appendChild(div)
+
+//   }
+
+// };
+// const handleAddCourse = async (e) => {
+//   e.preventDefault();
+//   if (formAddCourse === null || formAddCourse.value === '') return;
+//   const data = new FormData(formAddCourse);
+//   const course = {
+//     courseName: data.get('courseName').toString(),
+//     courseNumber: parseInt(data.get('courseNumber').toString()),
+//     duration: parseInt(data.get('duration').toString()),
+//     price: parseInt(data.get('price').toString()),
+
+//   };
+//   try {
+//     await fetch('http://localhost:3000/courses', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/js',
+//       },
+//       body: JSON.stringify(course),
+//     });
+//   } catch (error) {
+//     console.log('error');
+//   }
+//   addCourse(course);
+//   location.href = `./courses.html`
+// };
+const getAllCourses = async (courses) => {
+  const url = 'http://localhost:3000/courses?' + courses
   const response = await fetch(url)
-
   if (response.ok) {
-    const courses = await response.json();
-    displayCou(courses)
+    const course = await response.json();
+    console.log(course)
+
   }
+
 }
-
-const getCourseInfo = async (courseId) => {
-  const url = 'http://localhost:3000/bookings?courseId=' + courseId;
-  const response = await fetch(url);
-
-  if (response.ok) {
-    const bookings = await response.json();
-    displayCourseInfo(bookings);
-  }
-};
-
-const displayCourseInfo = (booking) => {
-  for (let booking of bookings) {
-    const div = createElement('div')
-    const studentName = createElement('span')
-    const courseName = createElement('span')
-
-    studentName.textContent = booking.studentName
-
-
-    div.appendChild(studentName)
-    courseList.appendChild(div)
-
-  }
-
-};
-const handleAddCourse = async (e) => {
-  e.preventDefault();
-  if (formAddCourse === null || formAddCourse.value === '') return;
-  const data = new FormData(formAddCourse);
-  const course = {
-    courseName: data.get('courseName').toString(),
-    courseNumber: parseInt(data.get('courseNumber').toString()),
-    duration: parseInt(data.get('duration').toString()),
-    price: parseInt(data.get('price').toString()),
-
-  };
-  try {
-    await fetch('http://localhost:3000/courses', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/js',
-      },
-      body: JSON.stringify(course),
-    });
-  } catch (error) {
-    console.log('error');
-  }
-  addCourse(course);
-  location.href = `./courses.html`
-};
+const displayAllcourses = () => { }
 
 document.addEventListener('DOMContentLoaded', initApp);
-formAddCourse?.addEventListener('submit', handleAddCourse);
+// formAddCourse?.addEventListener('submit', handleAddCourse);
