@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/site.css" />
-    <link rel="stylesheet" href="../assets/css/colors.css" />
     <link rel="stylesheet" href="../assets/css/navigation.css" />
     <link rel="stylesheet" href="../assets/css/form.css" />
+    
+    <link rel="stylesheet" href="../assets/css/colors.css" />
     <link rel="stylesheet" href="../assets/css/button.css" />
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
@@ -52,7 +53,10 @@
       <h1>tillgängliga kurser</h1>
       <div id ="listAllcourses">
       </div>
-      <h2 class="page-title">addera kurs</h2>
+      <h2>Student bokning</h2>
+      <div id ="showbookings">
+      </div>
+      <h2 class="page-title">Lägg till kurs</h2>
       <form id="addCourseForm">
         <div class="form-control">
           <label for="coursName">kursnamn</label>
@@ -73,9 +77,7 @@
         <button id="buttonSubmit" class="btn" type="submit">lägg till klass</button>
       </form> 
       <div id="errorMsg"></div>
-      <h3>Studenterna som bokat in sig på respektive kurs</h3>
-      <div id ="showbookings">
-      </div>
+
     </main>
   </body>
 </html>
