@@ -112,19 +112,8 @@ const handleAddCourse = async (e) => {
     courseNumber: parseInt(data.get('courseNumber').toString()),
     duration: parseInt(data.get('duration').toString()),
     price: parseInt(data.get('price').toString()),
-
   };
-  try {
-    await fetch('http://localhost:3000/courses', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/js',
-      },
-      body: JSON.stringify(course),
-    });
-  } catch (error) {
-    console.log('error');
-  }
+  await listAllCourses();
   addCourse(course);
   location.href = `./admin.html`
 };
