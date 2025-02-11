@@ -64,6 +64,7 @@ export const generateHtmlCourse = (course: ICourses) => {
     </div>
     <p>Kursen är: ${course.duration} dagar</p>
     <p>Kursstart: ${course.startDate}</p>
+    <p>Pris för kurs: ${course.price}</p>
     </div>
     `;
   return div;
