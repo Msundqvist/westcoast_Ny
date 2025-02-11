@@ -1,13 +1,10 @@
 
-
+import { displayCourseInfo, displayAllcourses } from "./utilities/dom.js";
 const formAddCourse = document.querySelector(
   '#addCourseForm'
 )
-const courseList = document.querySelector('#showbookings')
-const listCourses = document.querySelector('#listAllcourses')
 
 const initApp = () => {
-  // getCourseInfo(2);
   listAllCourses();
 };
 const addCourse = async (courses) => {
@@ -46,31 +43,8 @@ const getCourseInfo = async (courseId) => {
 
 };
 
-const displayCourseInfo = (bookings) => {
-  for (let booking of bookings) {
-    const div = document.createElement('div')
-    const studentName = document.createElement('span')
-    const studentEmail = document.createElement('span')
-    const courseId = document.createElement('span')
 
-
-    studentName.textContent = `Studentens Namn: ${booking.studentName}`
-    studentEmail.textContent = `Studentens E-post: ${booking.studentEmail}`
-    courseId.textContent = `Har bokat kurs: ${booking.courseId}`
-
-
-
-    div.appendChild(studentName)
-    div.appendChild(studentEmail)
-    div.appendChild(courseId)
-    courseList.appendChild(div)
-
-  }
-
-};
-
-
-const handleCourseList = () => {
+export const handleCourseList = () => {
   const url = location.search.split('=')[1]
   getCourseInfo(url)
 
@@ -86,23 +60,6 @@ const listAllCourses = async (courses) => {
   }
 }
 
-const displayAllcourses = (courses) => {
-
-  for (let course of courses) {
-    const div = document.createElement('div')
-    const courseName = document.createElement('Span')
-    const link = document.createElement('a')
-
-    courseName.appendChild(link)
-    link.href = `./admin.html?courseNumber=${course.courseNumber}`
-    link.textContent = course.courseName
-
-    div.appendChild(courseName)
-
-    listCourses.appendChild(div)
-  }
-  handleCourseList()
-}
 const handleAddCourse = async (e) => {
   e.preventDefault();
   if (formAddCourse === null || formAddCourse.value === '') return;
