@@ -65,20 +65,6 @@
       "startDate": "2025-03-15",
       "popular": false,
       "id": "6"
-    },
-    {
-      "id": "84b8",
-      "courseName": "bokkurs",
-      "courseNumber": 7,
-      "duration": 15,
-      "price": 689
-    },
-    {
-      "id": "8363",
-      "courseName": "bokkurs",
-      "courseNumber": 7,
-      "duration": 15,
-      "price": 689
     }
   ],
   "student": [

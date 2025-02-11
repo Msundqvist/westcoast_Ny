@@ -126,7 +126,7 @@ const handleAddCourse = async (e) => {
     console.log('error');
   }
   addCourse(course);
-  location.href = `./courses.html`
+  location.href = `./admin.html`
 };
 
 
