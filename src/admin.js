@@ -50,27 +50,33 @@ const getCourseInfo = async (courseId) => {
   if (response.ok) {
     const bookings = await response.json();
     console.log(bookings)
+    displayCourseInfo(bookings)
   }
 
 };
 
-// const displayCourseInfo = async (bookings) => {
-//   for (let booking of bookings) {
-//     const div = document.createElement('div')
-//     const studentName = document.createElement('span')
-//     const courseName = document.createElement('span')
-
-//     studentName.textContent = booking.studentName
-//     courseName.textContent = booking.courseName
+const displayCourseInfo = (bookings) => {
+  for (let booking of bookings) {
+    const div = document.createElement('div')
+    const studentName = document.createElement('span')
+    const studentEmail = document.createElement('span')
+    const courseId = document.createElement('span')
 
 
-//     div.appendChild(studentName)
-//     div.appendChild(courseName)
-//     courseList.appendChild(div)
+    studentName.textContent = `Studentens Namn: ${booking.studentName}`
+    studentEmail.textContent = `Studentens E-post: ${booking.studentEmail}`
+    courseId.textContent = `Har bokat kurs: ${booking.courseId}`
 
-//   }
 
-// };
+
+    div.appendChild(studentName)
+    div.appendChild(studentEmail)
+    div.appendChild(courseId)
+    courseList.appendChild(div)
+
+  }
+
+};
 // const handleAddCourse = async (e) => {
 //   e.preventDefault();
 //   if (formAddCourse === null || formAddCourse.value === '') return;
