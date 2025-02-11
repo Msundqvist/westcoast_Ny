@@ -9,6 +9,7 @@ export const courses = [
         startDate: '2025-04-10',
         popular: true,
         id: 1,
+        price: 1564,
     },
     {
         courseName: 'obedience class',
@@ -20,6 +21,7 @@ export const courses = [
         startDate: '2025-05-10',
         popular: false,
         id: 2,
+        price: 1564,
     },
     {
         courseName: 'Bird watching',
@@ -31,6 +33,7 @@ export const courses = [
         startDate: '2025-09-11',
         popular: false,
         id: 3,
+        price: 1564,
     },
     {
         courseName: 'Painting class',
@@ -42,6 +45,7 @@ export const courses = [
         startDate: '2025-07-15',
         popular: true,
         id: 4,
+        price: 1564,
     },
     {
         courseName: 'Cooking class',
@@ -53,6 +57,7 @@ export const courses = [
         startDate: '2025-07-15',
         popular: false,
         id: 5,
+        price: 1564,
     },
     {
         courseName: 'Survive in the wilderness',
@@ -64,5 +69,6 @@ export const courses = [
         startDate: '2025-03-15',
         popular: true,
         id: 6,
+        price: 1564,
     },
 ];

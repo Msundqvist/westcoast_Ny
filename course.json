@@ -65,6 +65,13 @@
       "startDate": "2025-03-15",
       "popular": false,
       "id": "6"
+    },
+    {
+      "id": "5e51",
+      "courseName": "karate",
+      "courseNumber": 17,
+      "duration": 156,
+      "price": 1567
     }
   ],
   "student": [
@@ -173,6 +180,12 @@
       "studentEmail": "malin@malin.com",
       "studentName": "malin",
       "courseId": 5
+    },
+    {
+      "id": "2a16",
+      "studentEmail": "michael@gmail.com",
+      "studentName": "michael",
+      "courseId": 2
     }
   ]
 }
